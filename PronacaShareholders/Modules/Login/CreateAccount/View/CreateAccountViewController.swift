@@ -12,6 +12,14 @@ import UIKit
 
 final class CreateAccountViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var mailField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    
+    
     // MARK: - Public properties -
 
     var presenter: CreateAccountPresenterInterface!
@@ -22,6 +30,10 @@ final class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func sendButtonAction(_ sender: Any) {
+    }
+    
+    
 }
 
 // MARK: - Extensions -

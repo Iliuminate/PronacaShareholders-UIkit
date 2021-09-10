@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginMainViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
+                <outlet property="createAccount" destination="CMp-97-bc0" id="cfQ-C8-Wfg"/>
+                <outlet property="emailField" destination="qeE-rY-OZU" id="HZQ-xR-Ixt"/>
+                <outlet property="forgotPassword" destination="DWL-t9-d5y" id="LQM-ef-cXH"/>
+                <outlet property="loginButton" destination="Go0-AC-eSg" id="HIn-gH-kJS"/>
+                <outlet property="passwordField" destination="YMT-db-ong" id="Fjv-Vu-ho3"/>
+                <outlet property="titleLabel" destination="bgf-BC-oaY" id="GPx-di-CW9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-Tw-xbH">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-Tw-xbH">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRt-iy-dBV">
@@ -70,6 +76,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWL-t9-d5y">
                                     <rect key="frame" x="25" y="397" width="145" height="30"/>
                                     <state key="normal" title="Olvide mi contraseña"/>
+                                    <connections>
+                                        <action selector="forgotPassword:" destination="-1" eventType="touchUpInside" id="J4T-rb-XlC"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-AC-eSg">
                                     <rect key="frame" x="94" y="449" width="187.5" height="40"/>
@@ -77,6 +86,9 @@
                                         <constraint firstAttribute="height" constant="40" id="Gai-U0-PyQ"/>
                                     </constraints>
                                     <state key="normal" title="Ingresar"/>
+                                    <connections>
+                                        <action selector="loginButtonAction:" destination="-1" eventType="touchUpInside" id="34X-rk-p3n"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="OKc-J4-0GG">
                                     <rect key="frame" x="25" y="512" width="325" height="40"/>
@@ -94,6 +106,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMp-97-bc0">
                                             <rect key="frame" x="190.5" y="0.0" width="112" height="40"/>
                                             <state key="normal" title="Crea una cuenta"/>
+                                            <connections>
+                                                <action selector="createAccountAction:" destination="-1" eventType="touchUpInside" id="xI8-IW-WTt"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZk-AR-G9k">
                                             <rect key="frame" x="305.5" y="0.0" width="19.5" height="40"/>
@@ -134,6 +149,7 @@
                         <constraint firstAttribute="trailing" secondItem="oRt-iy-dBV" secondAttribute="trailing" id="JR3-dZ-7fF"/>
                         <constraint firstItem="oRt-iy-dBV" firstAttribute="top" secondItem="8QY-Tw-xbH" secondAttribute="top" id="L1c-c7-mWS"/>
                         <constraint firstItem="oRt-iy-dBV" firstAttribute="bottom" secondItem="8QY-Tw-xbH" secondAttribute="bottom" id="tmf-ci-yke"/>
+                        <constraint firstItem="oRt-iy-dBV" firstAttribute="height" secondItem="8QY-Tw-xbH" secondAttribute="height" priority="250" id="xmt-wW-3iO"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -146,7 +162,6 @@
                 <constraint firstItem="Go0-AC-eSg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="ZLs-Vn-Qr0"/>
                 <constraint firstItem="8QY-Tw-xbH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aeM-PG-HmT"/>
                 <constraint firstItem="oRt-iy-dBV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="lhT-HC-A7g"/>
-                <constraint firstItem="oRt-iy-dBV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="mX7-I4-UeG"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="120.98950524737631"/>
         </view>

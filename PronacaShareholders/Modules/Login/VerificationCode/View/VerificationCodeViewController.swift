@@ -12,6 +12,20 @@ import UIKit
 
 final class VerificationCodeViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptioLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var resendButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var filed1: UITextField!
+    @IBOutlet weak var field2: UITextField!
+    @IBOutlet weak var field3: UITextField!
+    @IBOutlet weak var field4: UITextField!
+    @IBOutlet weak var field5: UITextField!
+    
+    
     // MARK: - Public properties -
 
     var presenter: VerificationCodePresenterInterface!
@@ -22,6 +36,12 @@ final class VerificationCodeViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func resendButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func sendButtonAction(_ sender: Any) {
+    }
+    
 }
 
 // MARK: - Extensions -
