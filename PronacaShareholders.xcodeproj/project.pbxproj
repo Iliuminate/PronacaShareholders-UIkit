@@ -3,16 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08751DF1495829B081BB6170 /* Pods_PronacaShareholders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */; };
 		0FD2DACF26EAE11A0058ABB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DACE26EAE11A0058ABB9 /* AppDelegate.swift */; };
 		0FD2DAD126EAE11A0058ABB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAD026EAE11A0058ABB9 /* SceneDelegate.swift */; };
 		0FD2DAD326EAE11A0058ABB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAD226EAE11A0058ABB9 /* ViewController.swift */; };
 		0FD2DAD626EAE11A0058ABB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DAD426EAE11A0058ABB9 /* Main.storyboard */; };
 		0FD2DAD826EAE11C0058ABB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DAD726EAE11C0058ABB9 /* Assets.xcassets */; };
 		0FD2DADB26EAE11C0058ABB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DAD926EAE11C0058ABB9 /* LaunchScreen.storyboard */; };
+		0FD2DAE426EAE15F0058ABB9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAE326EAE15F0058ABB9 /* UIColor+Extension.swift */; };
+		0FD2DAF126EAE7690058ABB9 /* LoginMainInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAEB26EAE7680058ABB9 /* LoginMainInterfaces.swift */; };
+		0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAEC26EAE7680058ABB9 /* LoginMainPresenter.swift */; };
+		0FD2DAF326EAE7690058ABB9 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAED26EAE7680058ABB9 /* LoginMainViewController.swift */; };
+		0FD2DAF426EAE7690058ABB9 /* LoginMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAEE26EAE7680058ABB9 /* LoginMainInteractor.swift */; };
+		0FD2DAF526EAE7690058ABB9 /* LoginMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DAEF26EAE7680058ABB9 /* LoginMainViewController.xib */; };
+		0FD2DAF626EAE7690058ABB9 /* LoginMainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAF026EAE7690058ABB9 /* LoginMainWireframe.swift */; };
+		0FD2DAFE26EAE7D60058ABB9 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAF826EAE7D60058ABB9 /* BaseWireframe.swift */; };
+		0FD2DAFF26EAE7D60058ABB9 /* FormatterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAF926EAE7D60058ABB9 /* FormatterInterface.swift */; };
+		0FD2DB0026EAE7D60058ABB9 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAFA26EAE7D60058ABB9 /* UIStoryboardExtension.swift */; };
+		0FD2DB0126EAE7D60058ABB9 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAFB26EAE7D60058ABB9 /* PresenterInterface.swift */; };
+		0FD2DB0226EAE7D60058ABB9 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAFC26EAE7D60058ABB9 /* ViewInterface.swift */; };
+		0FD2DB0326EAE7D60058ABB9 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DAFD26EAE7D60058ABB9 /* InteractorInterface.swift */; };
+		0FD2DB0E26EAE8620058ABB9 /* CreateAccountInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0826EAE8620058ABB9 /* CreateAccountInterfaces.swift */; };
+		0FD2DB0F26EAE8620058ABB9 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0926EAE8620058ABB9 /* CreateAccountPresenter.swift */; };
+		0FD2DB1026EAE8620058ABB9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0A26EAE8620058ABB9 /* CreateAccountViewController.swift */; };
+		0FD2DB1126EAE8620058ABB9 /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0B26EAE8620058ABB9 /* CreateAccountInteractor.swift */; };
+		0FD2DB1226EAE8620058ABB9 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0C26EAE8620058ABB9 /* CreateAccountViewController.xib */; };
+		0FD2DB1326EAE8620058ABB9 /* CreateAccountWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB0D26EAE8620058ABB9 /* CreateAccountWireframe.swift */; };
+		0FD2DB1B26EAE8750058ABB9 /* VerificationCodeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1526EAE8750058ABB9 /* VerificationCodeInterfaces.swift */; };
+		0FD2DB1C26EAE8750058ABB9 /* VerificationCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1626EAE8750058ABB9 /* VerificationCodePresenter.swift */; };
+		0FD2DB1D26EAE8750058ABB9 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1726EAE8750058ABB9 /* VerificationCodeViewController.swift */; };
+		0FD2DB1E26EAE8750058ABB9 /* VerificationCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1826EAE8750058ABB9 /* VerificationCodeInteractor.swift */; };
+		0FD2DB1F26EAE8750058ABB9 /* VerificationCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1926EAE8750058ABB9 /* VerificationCodeViewController.xib */; };
+		0FD2DB2026EAE8750058ABB9 /* VerificationCodeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB1A26EAE8750058ABB9 /* VerificationCodeWireframe.swift */; };
+		0FD2DB2726EAE8830058ABB9 /* FormAccountInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2126EAE8830058ABB9 /* FormAccountInterfaces.swift */; };
+		0FD2DB2826EAE8830058ABB9 /* FormAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2226EAE8830058ABB9 /* FormAccountPresenter.swift */; };
+		0FD2DB2926EAE8830058ABB9 /* FormAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2326EAE8830058ABB9 /* FormAccountViewController.swift */; };
+		0FD2DB2A26EAE8830058ABB9 /* FormAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2426EAE8830058ABB9 /* FormAccountInteractor.swift */; };
+		0FD2DB2B26EAE8830058ABB9 /* FormAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2526EAE8830058ABB9 /* FormAccountViewController.xib */; };
+		0FD2DB2C26EAE8830058ABB9 /* FormAccountWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2626EAE8830058ABB9 /* FormAccountWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +56,40 @@
 		0FD2DAD726EAE11C0058ABB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FD2DADA26EAE11C0058ABB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FD2DADC26EAE11C0058ABB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FD2DAE326EAE15F0058ABB9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0FD2DAEB26EAE7680058ABB9 /* LoginMainInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainInterfaces.swift; sourceTree = "<group>"; };
+		0FD2DAEC26EAE7680058ABB9 /* LoginMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainPresenter.swift; sourceTree = "<group>"; };
+		0FD2DAED26EAE7680058ABB9 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
+		0FD2DAEE26EAE7680058ABB9 /* LoginMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainInteractor.swift; sourceTree = "<group>"; };
+		0FD2DAEF26EAE7680058ABB9 /* LoginMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginMainViewController.xib; sourceTree = "<group>"; };
+		0FD2DAF026EAE7690058ABB9 /* LoginMainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainWireframe.swift; sourceTree = "<group>"; };
+		0FD2DAF826EAE7D60058ABB9 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		0FD2DAF926EAE7D60058ABB9 /* FormatterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterInterface.swift; sourceTree = "<group>"; };
+		0FD2DAFA26EAE7D60058ABB9 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		0FD2DAFB26EAE7D60058ABB9 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		0FD2DAFC26EAE7D60058ABB9 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		0FD2DAFD26EAE7D60058ABB9 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		0FD2DB0826EAE8620058ABB9 /* CreateAccountInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInterfaces.swift; sourceTree = "<group>"; };
+		0FD2DB0926EAE8620058ABB9 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
+		0FD2DB0A26EAE8620058ABB9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		0FD2DB0B26EAE8620058ABB9 /* CreateAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractor.swift; sourceTree = "<group>"; };
+		0FD2DB0C26EAE8620058ABB9 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		0FD2DB0D26EAE8620058ABB9 /* CreateAccountWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountWireframe.swift; sourceTree = "<group>"; };
+		0FD2DB1526EAE8750058ABB9 /* VerificationCodeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeInterfaces.swift; sourceTree = "<group>"; };
+		0FD2DB1626EAE8750058ABB9 /* VerificationCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodePresenter.swift; sourceTree = "<group>"; };
+		0FD2DB1726EAE8750058ABB9 /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
+		0FD2DB1826EAE8750058ABB9 /* VerificationCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeInteractor.swift; sourceTree = "<group>"; };
+		0FD2DB1926EAE8750058ABB9 /* VerificationCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeViewController.xib; sourceTree = "<group>"; };
+		0FD2DB1A26EAE8750058ABB9 /* VerificationCodeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeWireframe.swift; sourceTree = "<group>"; };
+		0FD2DB2126EAE8830058ABB9 /* FormAccountInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountInterfaces.swift; sourceTree = "<group>"; };
+		0FD2DB2226EAE8830058ABB9 /* FormAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountPresenter.swift; sourceTree = "<group>"; };
+		0FD2DB2326EAE8830058ABB9 /* FormAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountViewController.swift; sourceTree = "<group>"; };
+		0FD2DB2426EAE8830058ABB9 /* FormAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountInteractor.swift; sourceTree = "<group>"; };
+		0FD2DB2526EAE8830058ABB9 /* FormAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormAccountViewController.xib; sourceTree = "<group>"; };
+		0FD2DB2626EAE8830058ABB9 /* FormAccountWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountWireframe.swift; sourceTree = "<group>"; };
+		3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronacaShareholders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9198178BE6A31E7EAA997E /* Pods-PronacaShareholders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronacaShareholders.debug.xcconfig"; path = "Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E3655573E0613B4C110308 /* Pods-PronacaShareholders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronacaShareholders.release.xcconfig"; path = "Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08751DF1495829B081BB6170 /* Pods_PronacaShareholders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +109,8 @@
 			children = (
 				0FD2DACD26EAE11A0058ABB9 /* PronacaShareholders */,
 				0FD2DACC26EAE11A0058ABB9 /* Products */,
+				782F908BD809F53F2021D767 /* Pods */,
+				3B4E0A76AF78A7C069FC5A70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +125,9 @@
 		0FD2DACD26EAE11A0058ABB9 /* PronacaShareholders */ = {
 			isa = PBXGroup;
 			children = (
+				0FD2DAE826EAE1A00058ABB9 /* Models */,
+				0FD2DAE526EAE1860058ABB9 /* Modules */,
+				0FD2DAE226EAE14D0058ABB9 /* Common */,
 				0FD2DACE26EAE11A0058ABB9 /* AppDelegate.swift */,
 				0FD2DAD026EAE11A0058ABB9 /* SceneDelegate.swift */,
 				0FD2DAD226EAE11A0058ABB9 /* ViewController.swift */,
@@ -67,6 +139,179 @@
 			path = PronacaShareholders;
 			sourceTree = "<group>";
 		};
+		0FD2DAE226EAE14D0058ABB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DAF726EAE7BB0058ABB9 /* Base */,
+				0FD2DAEA26EAE1AC0058ABB9 /* Network */,
+				0FD2DAE926EAE1A60058ABB9 /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0FD2DAE526EAE1860058ABB9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DAE726EAE1960058ABB9 /* Register */,
+				0FD2DAE626EAE18E0058ABB9 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0FD2DAE626EAE18E0058ABB9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB0726EAE8340058ABB9 /* FormAccount */,
+				0FD2DB0626EAE8280058ABB9 /* VerificationCode */,
+				0FD2DB0526EAE81F0058ABB9 /* CreateAccount */,
+				0FD2DB0426EAE8090058ABB9 /* MainLogin */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0FD2DAE726EAE1960058ABB9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		0FD2DAE826EAE1A00058ABB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FD2DAE926EAE1A60058ABB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DAE326EAE15F0058ABB9 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0FD2DAEA26EAE1AC0058ABB9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0FD2DAF726EAE7BB0058ABB9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DAF826EAE7D60058ABB9 /* BaseWireframe.swift */,
+				0FD2DAF926EAE7D60058ABB9 /* FormatterInterface.swift */,
+				0FD2DAFA26EAE7D60058ABB9 /* UIStoryboardExtension.swift */,
+				0FD2DAFB26EAE7D60058ABB9 /* PresenterInterface.swift */,
+				0FD2DAFC26EAE7D60058ABB9 /* ViewInterface.swift */,
+				0FD2DAFD26EAE7D60058ABB9 /* InteractorInterface.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0FD2DB0426EAE8090058ABB9 /* MainLogin */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB3026EAE8C10058ABB9 /* View */,
+				0FD2DAEB26EAE7680058ABB9 /* LoginMainInterfaces.swift */,
+				0FD2DAEC26EAE7680058ABB9 /* LoginMainPresenter.swift */,
+				0FD2DAEE26EAE7680058ABB9 /* LoginMainInteractor.swift */,
+				0FD2DAF026EAE7690058ABB9 /* LoginMainWireframe.swift */,
+			);
+			path = MainLogin;
+			sourceTree = "<group>";
+		};
+		0FD2DB0526EAE81F0058ABB9 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB2F26EAE8A80058ABB9 /* View */,
+				0FD2DB0826EAE8620058ABB9 /* CreateAccountInterfaces.swift */,
+				0FD2DB0926EAE8620058ABB9 /* CreateAccountPresenter.swift */,
+				0FD2DB0B26EAE8620058ABB9 /* CreateAccountInteractor.swift */,
+				0FD2DB0D26EAE8620058ABB9 /* CreateAccountWireframe.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		0FD2DB0626EAE8280058ABB9 /* VerificationCode */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB2E26EAE89E0058ABB9 /* View */,
+				0FD2DB1526EAE8750058ABB9 /* VerificationCodeInterfaces.swift */,
+				0FD2DB1626EAE8750058ABB9 /* VerificationCodePresenter.swift */,
+				0FD2DB1826EAE8750058ABB9 /* VerificationCodeInteractor.swift */,
+				0FD2DB1A26EAE8750058ABB9 /* VerificationCodeWireframe.swift */,
+			);
+			path = VerificationCode;
+			sourceTree = "<group>";
+		};
+		0FD2DB0726EAE8340058ABB9 /* FormAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB2D26EAE8890058ABB9 /* View */,
+				0FD2DB2126EAE8830058ABB9 /* FormAccountInterfaces.swift */,
+				0FD2DB2226EAE8830058ABB9 /* FormAccountPresenter.swift */,
+				0FD2DB2426EAE8830058ABB9 /* FormAccountInteractor.swift */,
+				0FD2DB2626EAE8830058ABB9 /* FormAccountWireframe.swift */,
+			);
+			path = FormAccount;
+			sourceTree = "<group>";
+		};
+		0FD2DB2D26EAE8890058ABB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB2326EAE8830058ABB9 /* FormAccountViewController.swift */,
+				0FD2DB2526EAE8830058ABB9 /* FormAccountViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FD2DB2E26EAE89E0058ABB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB1726EAE8750058ABB9 /* VerificationCodeViewController.swift */,
+				0FD2DB1926EAE8750058ABB9 /* VerificationCodeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FD2DB2F26EAE8A80058ABB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DB0A26EAE8620058ABB9 /* CreateAccountViewController.swift */,
+				0FD2DB0C26EAE8620058ABB9 /* CreateAccountViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FD2DB3026EAE8C10058ABB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DAED26EAE7680058ABB9 /* LoginMainViewController.swift */,
+				0FD2DAEF26EAE7680058ABB9 /* LoginMainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B4E0A76AF78A7C069FC5A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		782F908BD809F53F2021D767 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F9198178BE6A31E7EAA997E /* Pods-PronacaShareholders.debug.xcconfig */,
+				D8E3655573E0613B4C110308 /* Pods-PronacaShareholders.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FD2DADF26EAE11C0058ABB9 /* Build configuration list for PBXNativeTarget "PronacaShareholders" */;
 			buildPhases = (
+				BCBAB5AA43810C4196443B51 /* [CP] Check Pods Manifest.lock */,
 				0FD2DAC726EAE11A0058ABB9 /* Sources */,
 				0FD2DAC826EAE11A0058ABB9 /* Frameworks */,
 				0FD2DAC926EAE11A0058ABB9 /* Resources */,
+				5E097D850CE802144ED1CCD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD2DADB26EAE11C0058ABB9 /* LaunchScreen.storyboard in Resources */,
+				0FD2DAF526EAE7690058ABB9 /* LoginMainViewController.xib in Resources */,
+				0FD2DB2B26EAE8830058ABB9 /* FormAccountViewController.xib in Resources */,
+				0FD2DB1F26EAE8750058ABB9 /* VerificationCodeViewController.xib in Resources */,
+				0FD2DB1226EAE8620058ABB9 /* CreateAccountViewController.xib in Resources */,
 				0FD2DAD826EAE11C0058ABB9 /* Assets.xcassets in Resources */,
 				0FD2DAD626EAE11A0058ABB9 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +383,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E097D850CE802144ED1CCD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBAB5AA43810C4196443B51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PronacaShareholders-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FD2DAC726EAE11A0058ABB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD2DAF626EAE7690058ABB9 /* LoginMainWireframe.swift in Sources */,
+				0FD2DB0F26EAE8620058ABB9 /* CreateAccountPresenter.swift in Sources */,
+				0FD2DAFF26EAE7D60058ABB9 /* FormatterInterface.swift in Sources */,
+				0FD2DAFE26EAE7D60058ABB9 /* BaseWireframe.swift in Sources */,
+				0FD2DB2826EAE8830058ABB9 /* FormAccountPresenter.swift in Sources */,
+				0FD2DB1C26EAE8750058ABB9 /* VerificationCodePresenter.swift in Sources */,
+				0FD2DB1D26EAE8750058ABB9 /* VerificationCodeViewController.swift in Sources */,
 				0FD2DAD326EAE11A0058ABB9 /* ViewController.swift in Sources */,
+				0FD2DB2C26EAE8830058ABB9 /* FormAccountWireframe.swift in Sources */,
+				0FD2DB2026EAE8750058ABB9 /* VerificationCodeWireframe.swift in Sources */,
+				0FD2DB1126EAE8620058ABB9 /* CreateAccountInteractor.swift in Sources */,
+				0FD2DB0226EAE7D60058ABB9 /* ViewInterface.swift in Sources */,
+				0FD2DB1026EAE8620058ABB9 /* CreateAccountViewController.swift in Sources */,
+				0FD2DAF326EAE7690058ABB9 /* LoginMainViewController.swift in Sources */,
+				0FD2DB0326EAE7D60058ABB9 /* InteractorInterface.swift in Sources */,
+				0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */,
 				0FD2DACF26EAE11A0058ABB9 /* AppDelegate.swift in Sources */,
+				0FD2DB1B26EAE8750058ABB9 /* VerificationCodeInterfaces.swift in Sources */,
 				0FD2DAD126EAE11A0058ABB9 /* SceneDelegate.swift in Sources */,
+				0FD2DB1E26EAE8750058ABB9 /* VerificationCodeInteractor.swift in Sources */,
+				0FD2DAF426EAE7690058ABB9 /* LoginMainInteractor.swift in Sources */,
+				0FD2DB1326EAE8620058ABB9 /* CreateAccountWireframe.swift in Sources */,
+				0FD2DB0126EAE7D60058ABB9 /* PresenterInterface.swift in Sources */,
+				0FD2DB2A26EAE8830058ABB9 /* FormAccountInteractor.swift in Sources */,
+				0FD2DB2926EAE8830058ABB9 /* FormAccountViewController.swift in Sources */,
+				0FD2DAE426EAE15F0058ABB9 /* UIColor+Extension.swift in Sources */,
+				0FD2DB0E26EAE8620058ABB9 /* CreateAccountInterfaces.swift in Sources */,
+				0FD2DB0026EAE7D60058ABB9 /* UIStoryboardExtension.swift in Sources */,
+				0FD2DAF126EAE7690058ABB9 /* LoginMainInterfaces.swift in Sources */,
+				0FD2DB2726EAE8830058ABB9 /* FormAccountInterfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +603,14 @@
 		};
 		0FD2DAE026EAE11C0058ABB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F9198178BE6A31E7EAA997E /* Pods-PronacaShareholders.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5TNCXPBUU;
 				INFOPLIST_FILE = PronacaShareholders/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +624,14 @@
 		};
 		0FD2DAE126EAE11C0058ABB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E3655573E0613B4C110308 /* Pods-PronacaShareholders.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5TNCXPBUU;
 				INFOPLIST_FILE = PronacaShareholders/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
