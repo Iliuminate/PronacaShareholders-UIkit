@@ -12,14 +12,13 @@ import UIKit
 
 final class VerificationCodeViewController: UIViewController {
 
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptioLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     
-    @IBOutlet weak var filed1: UITextField!
+    @IBOutlet weak var field1: UITextField!
     @IBOutlet weak var field2: UITextField!
     @IBOutlet weak var field3: UITextField!
     @IBOutlet weak var field4: UITextField!
@@ -27,24 +26,48 @@ final class VerificationCodeViewController: UIViewController {
     
     
     // MARK: - Public properties -
-
     var presenter: VerificationCodePresenterInterface!
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTextField()
     }
 
+    
+    private func setUpTextField() {
+        field1.delegate = self
+        field2.delegate = self
+        field3.delegate = self
+        field4.delegate = self
+        field5.delegate = self
+    }
+    
     @IBAction func resendButtonAction(_ sender: Any) {
     }
     
     @IBAction func sendButtonAction(_ sender: Any) {
+        guard let navigation = navigationController else { return }
+        navigation.pushWireframe(FormAccountWireframe())
     }
     
 }
 
 // MARK: - Extensions -
-
 extension VerificationCodeViewController: VerificationCodeViewInterface {
 }
+
+extension VerificationCodeViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 1: field2.becomeFirstResponder()
+        case 2: field3.becomeFirstResponder()
+        case 3: field4.becomeFirstResponder()
+        case 4: field5.becomeFirstResponder()
+        default: break
+        }
+    }
+}
+

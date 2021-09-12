@@ -31,6 +31,8 @@ final class CreateAccountViewController: UIViewController {
     }
 
     @IBAction func sendButtonAction(_ sender: Any) {
+        guard let navigation = navigationController else { return }
+        navigation.pushWireframe(FormAccountWireframe())
     }
     
     

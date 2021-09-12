@@ -10,35 +10,102 @@
 import UIKit
 
 final class LoginMainViewController: UIViewController {
-
+    
     @IBOutlet weak var createAccount: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     // MARK: - Public properties -
     var presenter: LoginMainPresenterInterface!
-
+    
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
+        addGestureRecognizer()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    // MARK: - Private methods -
+    
+    private func setUpView() {
+        emailField.delegate = self
+        passwordField.delegate = self
+        scrollView.delegate = self
+    }
+    
+    private func addGestureRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapDidTouch(sender: )))
+        view.addGestureRecognizer(tapRecognizer)
+        scrollView.addGestureRecognizer(tapRecognizer)
+    }
+    
+    
     @IBAction func loginButtonAction(_ sender: Any) {
+        guard let navigation = navigationController else { return }
     }
     
     @IBAction func createAccountAction(_ sender: Any) {
+        guard let navigation = navigationController else { return }
+        navigation.pushWireframe(CreateAccountWireframe())
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
+        guard let navigation = navigationController else { return }
     }
     
 }
 
 // MARK: - Extensions -
+extension LoginMainViewController: LoginMainViewInterface { }
 
-extension LoginMainViewController: LoginMainViewInterface {
+extension LoginMainViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+    }
+}
+
+extension LoginMainViewController: UIScrollViewDelegate {
+
+    @objc func tapDidTouch(sender: Any) {
+        view.endEditing(true)
+    }
+
+    @objc func keyboardWillShow(notif: Notification) {
+        guard let frame = notif.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let insets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: frame.height, right: 0.0)
+        scrollView.contentInset = insets
+        scrollView.scrollIndicatorInsets = insets
+    }
+
+    @objc func keyboardWillHide(notif: Notification) {
+        scrollView.contentInset = UIEdgeInsets()
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
 }

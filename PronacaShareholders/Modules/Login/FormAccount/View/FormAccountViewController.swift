@@ -12,19 +12,76 @@ import UIKit
 
 final class FormAccountViewController: UIViewController {
 
+    @IBOutlet weak var check1: UIImageView!
+    @IBOutlet weak var check2: UIImageView!
+    @IBOutlet weak var confirmPassField: UITextField!
+    @IBOutlet weak var idNumberField: UITextField!
+    @IBOutlet weak var mailField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var termButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     // MARK: - Public properties -
-
     var presenter: FormAccountPresenterInterface!
 
     // MARK: - Lifecycle -
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    private func setUpView() {
+        confirmPassField.delegate = self
+        idNumberField.delegate = self
+        mailField.delegate = self
+        nameField.delegate = self
+        passwordField.delegate = self
+        phoneField.delegate = self
+    }
+    
+    @IBAction func saveButtonAction(_ sender: Any) {
+    }
+    
 }
 
 // MARK: - Extensions -
 
 extension FormAccountViewController: FormAccountViewInterface {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+    }
+}
+
+extension FormAccountViewController: UIScrollViewDelegate {
+    
+    @objc func tapDidTouch(sender: Any) {
+        view.endEditing(true)
+    }
+
+    @objc func keyboardWillShow(notif: Notification) {
+        guard let frame = notif.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let insets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: frame.height, right: 0.0)
+        scrollView.contentInset = insets
+        scrollView.scrollIndicatorInsets = insets
+    }
+
+    @objc func keyboardWillHide(notif: Notification) {
+        scrollView.contentInset = UIEdgeInsets()
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+}
+
+extension FormAccountViewController: UITextFieldDelegate {
+    
 }

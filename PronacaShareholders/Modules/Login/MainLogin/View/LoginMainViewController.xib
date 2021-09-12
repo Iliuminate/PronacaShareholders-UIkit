@@ -16,6 +16,7 @@
                 <outlet property="forgotPassword" destination="DWL-t9-d5y" id="LQM-ef-cXH"/>
                 <outlet property="loginButton" destination="Go0-AC-eSg" id="HIn-gH-kJS"/>
                 <outlet property="passwordField" destination="YMT-db-ong" id="Fjv-Vu-ho3"/>
+                <outlet property="scrollView" destination="8QY-Tw-xbH" id="VV8-71-ahO"/>
                 <outlet property="titleLabel" destination="bgf-BC-oaY" id="GPx-di-CW9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,14 +32,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRt-iy-dBV">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pronacaRed" translatesAutoresizingMaskIntoConstraints="NO" id="hHK-rZ-MHB">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hHK-rZ-MHB">
                                     <rect key="frame" x="67.5" y="45" width="240" height="128"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="5wl-Nc-Ck9"/>
                                         <constraint firstAttribute="width" constant="240" id="J9o-gR-HoM"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVW-c9-ym2">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" translatesAutoresizingMaskIntoConstraints="NO" id="lVW-c9-ym2">
                                     <rect key="frame" x="167.5" y="193" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="2zZ-XU-oBH"/>
@@ -57,18 +58,17 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="acp-fP-XhY">
                                     <rect key="frame" x="25" y="299" width="325" height="90"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-rY-OZU">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-rY-OZU">
                                             <rect key="frame" x="0.0" y="0.0" width="325" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-db-ong">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-db-ong">
                                             <rect key="frame" x="0.0" y="49" width="325" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="90" id="MNU-CD-V2w"/>
                                     </constraints>
@@ -167,10 +167,8 @@
         </view>
     </objects>
     <resources>
-        <image name="pronacaRed" width="1566" height="1290"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="key" width="98.5" height="82.5"/>
+        <image name="logo" width="647" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

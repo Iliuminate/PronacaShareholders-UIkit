@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerificationCodeViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
                 <outlet property="descriptioLabel" destination="7uj-IZ-o2p" id="54A-8x-oFW"/>
+                <outlet property="field1" destination="8qf-UV-nns" id="47j-KG-fyG"/>
                 <outlet property="field2" destination="nq8-q8-oii" id="HQc-gl-8YL"/>
                 <outlet property="field3" destination="5ML-0j-VRH" id="Z3K-qh-uQt"/>
                 <outlet property="field4" destination="IOC-hZ-mzJ" id="knv-79-d5O"/>
                 <outlet property="field5" destination="dqm-lr-6mD" id="1Fj-VM-pjK"/>
-                <outlet property="filed1" destination="8qf-UV-nns" id="47j-KG-fyG"/>
                 <outlet property="infoLabel" destination="9bR-TR-31s" id="0RZ-bi-zhb"/>
                 <outlet property="resendButton" destination="aHE-F3-3Wu" id="uft-XK-hWT"/>
                 <outlet property="sendButton" destination="CoF-x1-Yi8" id="nuR-Zf-JyA"/>
@@ -74,7 +74,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jHw-Qh-In6">
                     <rect key="frame" x="99" y="245.5" width="216" height="45"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-UV-nns">
+                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-UV-nns">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Hbw-Mr-SpQ"/>
@@ -82,22 +82,22 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-q8-oii">
+                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-q8-oii">
                             <rect key="frame" x="44" y="0.0" width="40" height="45"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ML-0j-VRH">
+                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ML-0j-VRH">
                             <rect key="frame" x="88" y="0.0" width="40" height="45"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-hZ-mzJ">
+                        <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-hZ-mzJ">
                             <rect key="frame" x="132" y="0.0" width="40" height="45"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-lr-6mD">
+                        <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-lr-6mD">
                             <rect key="frame" x="176" y="0.0" width="40" height="45"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
