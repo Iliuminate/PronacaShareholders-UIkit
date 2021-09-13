@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageController" customModule="PronacaShareholders" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="iaE-mj-l8B" id="7r4-j4-uOc"/>
+                <outlet property="pageControl" destination="E7P-ZV-2Pa" id="HMA-9b-T7i"/>
+                <outlet property="sliderScrollView" destination="dUs-R2-d3F" id="l1j-xz-H3B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUs-R2-d3F">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="E7P-ZV-2Pa">
+                    <rect key="frame" x="146" y="734" width="122" height="28"/>
+                    <color key="backgroundColor" red="0.8156862855" green="0.22745099660000001" blue="0.1686274707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-mj-l8B">
+                    <rect key="frame" x="103.5" y="782" width="207" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="LKr-7f-1ca"/>
+                    </constraints>
+                    <state key="normal" title="Empezar"/>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="cVd-nk-IC9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="E7P-ZV-2Pa" secondAttribute="bottom" constant="100" id="CWL-4m-nIh"/>
+                <constraint firstItem="iaE-mj-l8B" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KIT-0z-a8C"/>
+                <constraint firstItem="dUs-R2-d3F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="W0k-nR-knU"/>
+                <constraint firstItem="E7P-ZV-2Pa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dQw-XJ-c1q"/>
+                <constraint firstItem="dUs-R2-d3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="del-FJ-FnA"/>
+                <constraint firstItem="dUs-R2-d3F" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eWT-xL-MTc"/>
+                <constraint firstItem="iaE-mj-l8B" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="hXb-RJ-cbH"/>
+                <constraint firstItem="dUs-R2-d3F" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="o2u-nW-dk8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iaE-mj-l8B" secondAttribute="bottom" constant="40" id="xxT-ik-wEn"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

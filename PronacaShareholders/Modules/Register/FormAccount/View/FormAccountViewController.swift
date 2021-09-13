@@ -32,6 +32,8 @@ final class FormAccountViewController: UIViewController {
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
+        addGestureRecognizer()
     }
     
     private func setUpView() {
@@ -41,6 +43,12 @@ final class FormAccountViewController: UIViewController {
         nameField.delegate = self
         passwordField.delegate = self
         phoneField.delegate = self
+    }
+    
+    private func addGestureRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapDidTouch(sender: )))
+        view.addGestureRecognizer(tapRecognizer)
+        scrollView.addGestureRecognizer(tapRecognizer)
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {

@@ -28,6 +28,7 @@ final class LoginMainViewController: UIViewController {
         super.viewDidLoad()
         setUpView()
         addGestureRecognizer()
+        setUpFields()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,15 +54,36 @@ final class LoginMainViewController: UIViewController {
         scrollView.delegate = self
     }
     
+    private func setUpFields() {
+        // TODO: CEDA
+        //emailField.addLeftImage(imageName: "mail")
+        //passwordField.addLeftImage(imageName: "security")
+        
+        addLeftView(field: emailField, imageName: "mail")
+        addLeftView(field: passwordField, imageName: "security")
+    }
+    
+    private func addLeftView(field: UITextField, imageName: String, size: CGSize = CGSize(width: 5, height: 5)) {
+        let icon = UIImageView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        icon.image = UIImage(named: imageName)
+        icon.contentMode = .scaleToFill
+        field.leftView = icon
+        field.leftViewMode = .always
+    }
+    
     private func addGestureRecognizer() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapDidTouch(sender: )))
         view.addGestureRecognizer(tapRecognizer)
         scrollView.addGestureRecognizer(tapRecognizer)
     }
     
+    private func stUpStyles() {
+        titleLabel.font = UIFont(.MontserratSemiBold, .s24)
+    }
     
     @IBAction func loginButtonAction(_ sender: Any) {
         guard let navigation = navigationController else { return }
+        navigation.pushViewController(PageController(), animated: true)
     }
     
     @IBAction func createAccountAction(_ sender: Any) {
@@ -92,18 +114,18 @@ extension LoginMainViewController: UITextFieldDelegate {
 }
 
 extension LoginMainViewController: UIScrollViewDelegate {
-
+    
     @objc func tapDidTouch(sender: Any) {
         view.endEditing(true)
     }
-
+    
     @objc func keyboardWillShow(notif: Notification) {
         guard let frame = notif.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
         let insets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: frame.height, right: 0.0)
         scrollView.contentInset = insets
         scrollView.scrollIndicatorInsets = insets
     }
-
+    
     @objc func keyboardWillHide(notif: Notification) {
         scrollView.contentInset = UIEdgeInsets()
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)

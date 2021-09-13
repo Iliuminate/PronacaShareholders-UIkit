@@ -23,20 +23,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea tu cuenta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAI-vN-1ug">
-                    <rect key="frame" x="25" y="84" width="364" height="20.5"/>
+                    <rect key="frame" x="25" y="64" width="364" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8DR-B9-pLu">
-                    <rect key="frame" x="87" y="134.5" width="240" height="128"/>
+                    <rect key="frame" x="87" y="114.5" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="9vE-AS-BJQ"/>
                         <constraint firstAttribute="width" constant="240" id="q2B-Q3-V2m"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-yC-zAQ">
-                    <rect key="frame" x="25" y="400.5" width="364" height="105"/>
+                    <rect key="frame" x="25" y="370.5" width="364" height="105"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuerda que para ingresar a la APP de Pronaca. Debes estar registrado en la base de datos de la Empresa." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0p-Rn-hUw">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="61"/>
@@ -52,7 +52,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-ve-yP1">
-                    <rect key="frame" x="124" y="550.5" width="166" height="30"/>
+                    <rect key="frame" x="124" y="520.5" width="166" height="30"/>
                     <state key="normal" title="Enviar"/>
                     <connections>
                         <action selector="sendButtonAction:" destination="-1" eventType="touchUpInside" id="FuY-Ml-NsW"/>
@@ -62,13 +62,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="KAP-yC-zAQ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="77w-0J-0kb"/>
+                <constraint firstItem="KAP-yC-zAQ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-30" id="77w-0J-0kb"/>
                 <constraint firstItem="Rvn-ve-yP1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="J5S-W7-Ahx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OAI-vN-1ug" secondAttribute="trailing" constant="25" id="Ja4-BN-Cjf"/>
                 <constraint firstItem="Rvn-ve-yP1" firstAttribute="top" secondItem="KAP-yC-zAQ" secondAttribute="bottom" constant="45" id="NEh-Zd-1AJ"/>
                 <constraint firstItem="OAI-vN-1ug" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="hTd-bX-qUC"/>
                 <constraint firstItem="Rvn-ve-yP1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jUK-oJ-Dwe"/>
-                <constraint firstItem="OAI-vN-1ug" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="osH-le-ofC"/>
+                <constraint firstItem="OAI-vN-1ug" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="osH-le-ofC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KAP-yC-zAQ" secondAttribute="trailing" constant="25" id="paK-Q2-3Xa"/>
                 <constraint firstItem="8DR-B9-pLu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qY6-Dw-sjb"/>
                 <constraint firstItem="KAP-yC-zAQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="vdM-aw-njv"/>
