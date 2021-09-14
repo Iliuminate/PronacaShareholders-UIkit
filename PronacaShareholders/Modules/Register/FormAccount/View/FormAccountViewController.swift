@@ -25,6 +25,7 @@ final class FormAccountViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var termButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Public properties -
     var presenter: FormAccountPresenterInterface!
@@ -50,7 +51,10 @@ final class FormAccountViewController: UIViewController {
     private func setUpStyles() {
         titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 24.0)!
         titleLabel.textColor = .black1
+        descriptionLabel.font = UIFont(.MontserratRegular, .s16)
+        descriptionLabel.textColor = .black1
         saveButton.greenButton()
+        termButton.greenButton2()
     }
     
     private func configureBackButton() {
@@ -78,6 +82,16 @@ final class FormAccountViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
+        UIView.animate(
+            withDuration: 1.0,
+            delay: 0,
+            options: .curveLinear,
+            animations: {},
+            completion: { _ in
+                self.view.window?.rootViewController = HomeViewController()
+            }
+        )
+        
     }
     
 }
