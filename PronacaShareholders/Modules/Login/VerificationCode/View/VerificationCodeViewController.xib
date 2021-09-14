@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerificationCodeViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
-                <outlet property="descriptioLabel" destination="7uj-IZ-o2p" id="54A-8x-oFW"/>
+                <outlet property="descriptionLabel" destination="7uj-IZ-o2p" id="54A-8x-oFW"/>
                 <outlet property="field1" destination="8qf-UV-nns" id="47j-KG-fyG"/>
                 <outlet property="field2" destination="nq8-q8-oii" id="HQc-gl-8YL"/>
                 <outlet property="field3" destination="5ML-0j-VRH" id="Z3K-qh-uQt"/>
@@ -30,13 +28,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea tu cuenta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au5-As-nQW">
-                    <rect key="frame" x="25" y="64" width="364" height="20.5"/>
+                    <rect key="frame" x="25" y="20" width="364" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7na-kj-rLs">
-                    <rect key="frame" x="25" y="295.5" width="364" height="40"/>
+                    <rect key="frame" x="25" y="251.5" width="364" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-0c-dDy">
                             <rect key="frame" x="0.0" y="0.0" width="25" height="40"/>
@@ -66,13 +64,13 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese el código de 5 digitos que fue enviado a su correo j*******@pronaca.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uj-IZ-o2p">
-                    <rect key="frame" x="25" y="144.5" width="364" height="41"/>
+                    <rect key="frame" x="25" y="100.5" width="364" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jHw-Qh-In6">
-                    <rect key="frame" x="99" y="225.5" width="216" height="45"/>
+                    <rect key="frame" x="99" y="181.5" width="216" height="45"/>
                     <subviews>
                         <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-UV-nns">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="45"/>
@@ -108,7 +106,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoF-x1-Yi8">
-                    <rect key="frame" x="124" y="395.5" width="166" height="30"/>
+                    <rect key="frame" x="124" y="351.5" width="166" height="30"/>
                     <state key="normal" title="Enviar"/>
                     <connections>
                         <action selector="sendButtonAction:" destination="-1" eventType="touchUpInside" id="xAQ-qi-Mif"/>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08751DF1495829B081BB6170 /* Pods_PronacaShareholders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */; };
+		0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6226F033450043A966 /* CustomNavigationController.swift */; };
+		0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */; };
 		0FC8C45526EEC1230084F353 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45326EEC1230084F353 /* PageController.swift */; };
 		0FC8C45626EEC1230084F353 /* PageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC8C45426EEC1230084F353 /* PageController.xib */; };
 		0FC8C45826EECEE60084F353 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1B3F6226F033450043A966 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		0FC8C45326EEC1230084F353 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		0FC8C45426EEC1230084F353 /* PageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageController.xib; sourceTree = "<group>"; };
 		0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				0FD2DAF726EAE7BB0058ABB9 /* Base */,
 				0FD2DAEA26EAE1AC0058ABB9 /* Network */,
 				0FD2DAE926EAE1A60058ABB9 /* Extension */,
+				0F1B3F6226F033450043A966 /* CustomNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */,
 				0FC8C46C26EEDBF30084F353 /* UIFont+Extension.swift */,
 				0FC8C46E26EEE0B30084F353 /* UIButton+Extension.swift */,
+				0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */,
 				0FD2DACF26EAE11A0058ABB9 /* AppDelegate.swift in Sources */,
 				0FC8C45526EEC1230084F353 /* PageController.swift in Sources */,
+				0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */,
 				0FD2DB1B26EAE8750058ABB9 /* VerificationCodeInterfaces.swift in Sources */,
 				0FD2DAD126EAE11A0058ABB9 /* SceneDelegate.swift in Sources */,
 				0FC8C46D26EEDBF30084F353 /* UIFont+Extension.swift in Sources */,
@@ -532,6 +539,7 @@
 				0FD2DB0026EAE7D60058ABB9 /* UIStoryboardExtension.swift in Sources */,
 				0FD2DAF126EAE7690058ABB9 /* LoginMainInterfaces.swift in Sources */,
 				0FD2DB2726EAE8830058ABB9 /* FormAccountInterfaces.swift in Sources */,
+				0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

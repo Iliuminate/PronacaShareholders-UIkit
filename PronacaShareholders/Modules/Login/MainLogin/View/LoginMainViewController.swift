@@ -18,7 +18,7 @@ final class LoginMainViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Public properties -
     var presenter: LoginMainPresenterInterface!
@@ -34,6 +34,7 @@ final class LoginMainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        setUpStyles()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +64,16 @@ final class LoginMainViewController: UIViewController {
         addLeftView(field: passwordField, imageName: "security")
     }
     
+    private func setUpStyles() {
+        titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 24.0)!
+        titleLabel.textColor = .black1
+        descriptionLabel.font = UIFont(.MontserratRegular, .s12)
+        descriptionLabel.textColor = .black1
+        loginButton.greenButton()
+        createAccount.redButton1()
+        forgotPassword.redButton2()
+    }
+    
     private func addLeftView(field: UITextField, imageName: String, size: CGSize = CGSize(width: 5, height: 5)) {
         let icon = UIImageView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         icon.image = UIImage(named: imageName)
@@ -77,18 +88,14 @@ final class LoginMainViewController: UIViewController {
         scrollView.addGestureRecognizer(tapRecognizer)
     }
     
-    private func stUpStyles() {
-        titleLabel.font = UIFont(.MontserratSemiBold, .s24)
-    }
-    
     @IBAction func loginButtonAction(_ sender: Any) {
         guard let navigation = navigationController else { return }
-        navigation.pushViewController(PageController(), animated: true)
+        navigation.pushWireframe(CreateAccountWireframe())
     }
     
     @IBAction func createAccountAction(_ sender: Any) {
         guard let navigation = navigationController else { return }
-        navigation.pushWireframe(CreateAccountWireframe())
+        navigation.pushWireframe(FormAccountWireframe())
     }
     
     @IBAction func forgotPassword(_ sender: Any) {

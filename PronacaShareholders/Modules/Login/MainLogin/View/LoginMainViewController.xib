@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginMainViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
                 <outlet property="createAccount" destination="CMp-97-bc0" id="cfQ-C8-Wfg"/>
+                <outlet property="descriptionLabel" destination="vRB-lv-QWW" id="vjg-Re-eTd"/>
                 <outlet property="emailField" destination="qeE-rY-OZU" id="HZQ-xR-Ixt"/>
                 <outlet property="forgotPassword" destination="DWL-t9-d5y" id="LQM-ef-cXH"/>
                 <outlet property="loginButton" destination="Go0-AC-eSg" id="HIn-gH-kJS"/>
@@ -51,7 +52,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="zQI-ot-XbG"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>

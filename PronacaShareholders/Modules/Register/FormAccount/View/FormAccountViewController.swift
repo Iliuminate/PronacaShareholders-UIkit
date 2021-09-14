@@ -34,6 +34,8 @@ final class FormAccountViewController: UIViewController {
         super.viewDidLoad()
         setUpView()
         addGestureRecognizer()
+        configureBackButton()
+        setUpStyles()
     }
     
     private func setUpView() {
@@ -43,6 +45,30 @@ final class FormAccountViewController: UIViewController {
         nameField.delegate = self
         passwordField.delegate = self
         phoneField.delegate = self
+    }
+    
+    private func setUpStyles() {
+        titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 24.0)!
+        titleLabel.textColor = .black1
+        saveButton.greenButton()
+    }
+    
+    private func configureBackButton() {
+        navigationItem.configureBarButton(
+            imageName: "backArrow",
+            tintColor: .green2,
+            target: self,
+            selector: #selector(backAction),
+            side: .left
+        )
+    }
+    
+    @objc func backAction() {
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func addGestureRecognizer() {

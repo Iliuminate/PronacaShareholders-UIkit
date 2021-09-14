@@ -23,11 +23,43 @@ final class CreateAccountViewController: UIViewController {
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureBackButton()
+        setUpStyles()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
+    private func setUpStyles() {
+        titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 24.0)!
+        titleLabel.textColor = .black1
+        descriptionLabel.font = UIFont(.MontserratRegular, .s12)
+        descriptionLabel.textColor = .black1
+        sendButton.greenButton()
+    }
+    
+    private func configureBackButton() {
+        navigationItem.configureBarButton(
+            imageName: "backArrow",
+            tintColor: .green2,
+            target: self,
+            selector: #selector(backAction),
+            side: .left
+        )
+    }
+    
+    @objc func backAction() {
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func sendButtonAction(_ sender: Any) {
         guard let navigation = navigationController else { return }
-        navigation.pushWireframe(FormAccountWireframe())
+        navigation.pushWireframe(VerificationCodeWireframe())
     }
     
     

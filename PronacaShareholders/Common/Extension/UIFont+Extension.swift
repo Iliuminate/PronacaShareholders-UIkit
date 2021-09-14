@@ -7,6 +7,28 @@
 
 import UIKit
 
+enum LocalFonts: String {
+    case CenturyGothic = "CenturyGothic"
+    case MontserratBold = "Montserrat-Bold"
+    case MontserratMedium = "Montserrat-Medium"
+    case MontserratRegular = "Montserrat-Regular"
+    case MontserratSemiBold = "Montserrat-SemiBold"
+    case OpenSansBold = "OpenSans-Bold"
+    case OpenSansRegular = "OpenSans-Regular"
+    case RalewayLight = "Raleway-Light"
+    case RobotoMedium = "Roboto-Medium"
+}
+
+enum LocalFontSize: CGFloat {
+    case s12 = 12.0
+    case s14 = 14.0
+    case s16 = 16.0
+    case s18 = 18.0
+    case s21 = 21.0
+    case s24 = 24.0
+}
+
+
 extension UIFont {
     
     func getFont(fontName: String) -> UIFont {
@@ -18,27 +40,6 @@ extension UIFont {
             )
         }
         return customFont
-    }
-    
-    enum LocalFonts: String {
-        case CenturyGothic
-        case MontserratBold = "Montserrat-Bold"
-        case MontserratMedium = "Montserrat-Medium"
-        case MontserratRegular = "Montserrat-Regular"
-        case MontserratSemiBold = "Montserrat-SemiBold"
-        case OpenSansBold = "OpenSans-Bold"
-        case OpenSansRegular = "OpenSans-Regular"
-        case RalewayLight = "Raleway-Light"
-        case RobotoMedium = "Roboto-Medium"
-    }
-    
-    enum LocalFontSize: CGFloat {
-        case s12 = 12.0
-        case s14 = 14.0
-        case s16 = 16.0
-        case s18 = 18.0
-        case s21 = 21.0
-        case s24 = 24.0
     }
     
     convenience init(_ font: LocalFonts, _ size: LocalFontSize) {

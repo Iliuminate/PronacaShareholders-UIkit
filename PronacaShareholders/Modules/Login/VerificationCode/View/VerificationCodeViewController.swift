@@ -13,7 +13,7 @@ import UIKit
 final class VerificationCodeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptioLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
@@ -33,6 +33,8 @@ final class VerificationCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
+        configureBackButton()
+        setUpStyles()
     }
 
     
@@ -42,6 +44,33 @@ final class VerificationCodeViewController: UIViewController {
         field3.delegate = self
         field4.delegate = self
         field5.delegate = self
+    }
+    
+    private func setUpStyles() {
+        titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 24.0)!
+        titleLabel.textColor = .black1
+        descriptionLabel.font = UIFont(.MontserratRegular, .s12)
+        descriptionLabel.textColor = .black1
+        sendButton.greenButton()
+        resendButton.redButton2()
+    }
+    
+    private func configureBackButton() {
+        navigationItem.configureBarButton(
+            imageName: "backArrow",
+            tintColor: .green2,
+            target: self,
+            selector: #selector(backAction),
+            side: .left
+        )
+    }
+    
+    @objc func backAction() {
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func resendButtonAction(_ sender: Any) {
