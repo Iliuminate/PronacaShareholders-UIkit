@@ -9,9 +9,23 @@ import UIKit
 
 class SectionsCell: UICollectionViewCell {
 
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var titleLable: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUpStyle()
+    }
+    
+    private func setUpStyle() {
+        titleLable.textColor = .black1
+        titleLable.font = UIFont(.MontserratSemiBold, .s12)
+        icon.contentMode = .scaleAspectFit
+    }
+    
+    func configure(with data: SectionItem) {
+        titleLable.text = data.name
+        icon.image = UIImage(named: data.icon)
     }
 
 }

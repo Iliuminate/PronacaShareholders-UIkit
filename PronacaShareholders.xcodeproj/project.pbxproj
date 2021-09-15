@@ -74,6 +74,7 @@
 		0FD2DB2B26EAE8830058ABB9 /* FormAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2526EAE8830058ABB9 /* FormAccountViewController.xib */; };
 		0FD2DB2C26EAE8830058ABB9 /* FormAccountWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2DB2626EAE8830058ABB9 /* FormAccountWireframe.swift */; };
 		0FD871CF26F17293002BD61D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD871CE26F17293002BD61D /* CustomTextField.swift */; };
+		0FD871D226F18A8F002BD61D /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD871D126F18A8F002BD61D /* SectionItem.swift */; };
 		0FE59F6F26F16D5D007F8115 /* UICheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE59F6E26F16D5D007F8115 /* UICheckBox.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +147,7 @@
 		0FD2DB2526EAE8830058ABB9 /* FormAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormAccountViewController.xib; sourceTree = "<group>"; };
 		0FD2DB2626EAE8830058ABB9 /* FormAccountWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAccountWireframe.swift; sourceTree = "<group>"; };
 		0FD871CE26F17293002BD61D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0FD871D126F18A8F002BD61D /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		0FE59F6E26F16D5D007F8115 /* UICheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICheckBox.swift; sourceTree = "<group>"; };
 		3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronacaShareholders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9198178BE6A31E7EAA997E /* Pods-PronacaShareholders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronacaShareholders.debug.xcconfig"; path = "Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		0F1B3F7326F03E380043A966 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FD871D026F18A67002BD61D /* Models */,
 				0F1B3F7426F0419A0043A966 /* Cells */,
 				0F1B3F6926F03E320043A966 /* HomeViewController.swift */,
 				0F1B3F6B26F03E320043A966 /* HomeViewController.xib */,
@@ -433,6 +436,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		0FD871D026F18A67002BD61D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FD871D126F18A8F002BD61D /* SectionItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3B4E0A76AF78A7C069FC5A70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +638,7 @@
 				0FD2DB0026EAE7D60058ABB9 /* UIStoryboardExtension.swift in Sources */,
 				0FD2DAF126EAE7690058ABB9 /* LoginMainInterfaces.swift in Sources */,
 				0FD2DB2726EAE8830058ABB9 /* FormAccountInterfaces.swift in Sources */,
+				0FD871D226F18A8F002BD61D /* SectionItem.swift in Sources */,
 				0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,18 +16,71 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     // MARK: - Public properties -
-
     var presenter: HomePresenterInterface!
+    var sections: [SectionItem] = [
+        SectionItem(icon: "meat-group", name: "Cárnicos"),
+        SectionItem(icon: "fish-group", name: "Pescados y Mariscos"),
+        SectionItem(icon: "sausages-group", name: "Embutidos"),
+        SectionItem(icon: "freezer-group", name: "Refrigerados y congelados"),
+        SectionItem(icon: "canned-group", name: "Listo para servir"),
+        SectionItem(icon: "sausages-group", name: "Salsas, aliños y conservas"),
+        SectionItem(icon: "pets-group", name: "Mascotas"),
+        SectionItem(icon: "processed-group", name: "Embutidos")
+    ]
+    
 
     // MARK: - Lifecycle -
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
     }
 
+    private func setUpView() {
+        mainCollection.delegate = self
+        mainCollection.dataSource = self
+        mainCollection.register(UINib(nibName: "\(SectionsCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(SectionsCell.self)")
+    }
 }
 
 // MARK: - Extensions -
 
 extension HomeViewController: HomeViewInterface {
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SectionsCell.self)", for: indexPath) as! SectionsCell
+        cell.configure(with: sections[indexPath.row])
+        return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let widthItem = (collectionView.frame.width / 4.0) - 25
+        let heightItem = widthItem * 1.25
+        return CGSize(width: widthItem, height: heightItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 4, left: 25, bottom: 4, right: 25)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
