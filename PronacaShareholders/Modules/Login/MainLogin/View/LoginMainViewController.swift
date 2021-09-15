@@ -14,8 +14,8 @@ final class LoginMainViewController: UIViewController {
     @IBOutlet weak var createAccount: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: CustomTextField!
+    @IBOutlet weak var passwordField: CustomTextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -56,12 +56,11 @@ final class LoginMainViewController: UIViewController {
     }
     
     private func setUpFields() {
-        // TODO: CEDA
-        //emailField.addLeftImage(imageName: "mail")
-        //passwordField.addLeftImage(imageName: "security")
-        
-        addLeftView(field: emailField, imageName: "mail")
-        addLeftView(field: passwordField, imageName: "security")
+        emailField.setLeftImage("mail")
+        passwordField.setLeftImage("security")
+        passwordField.isSecureTextEntry = true
+        emailField.borderStyle = .none
+        passwordField.borderStyle = .none
     }
     
     private func setUpStyles() {

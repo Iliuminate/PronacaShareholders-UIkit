@@ -57,32 +57,35 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="acp-fP-XhY">
-                                    <rect key="frame" x="25" y="299" width="325" height="90"/>
+                                    <rect key="frame" x="25" y="299" width="325" height="88"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-rY-OZU">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="41"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-rY-OZU" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="euN-ym-tCp"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-db-ong">
-                                            <rect key="frame" x="0.0" y="49" width="325" height="41"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-db-ong" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="48" width="325" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="2wu-c7-XcZ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="90" id="MNU-CD-V2w"/>
-                                    </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWL-t9-d5y">
-                                    <rect key="frame" x="25" y="397" width="145" height="30"/>
+                                    <rect key="frame" x="25" y="395" width="145" height="30"/>
                                     <state key="normal" title="Olvide mi contraseña"/>
                                     <connections>
                                         <action selector="forgotPassword:" destination="-1" eventType="touchUpInside" id="J4T-rb-XlC"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-AC-eSg">
-                                    <rect key="frame" x="94" y="449" width="187.5" height="40"/>
+                                    <rect key="frame" x="94" y="447" width="187.5" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Gai-U0-PyQ"/>
                                     </constraints>
@@ -92,7 +95,7 @@
                                     </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="OKc-J4-0GG">
-                                    <rect key="frame" x="25" y="512" width="325" height="40"/>
+                                    <rect key="frame" x="25" y="510" width="325" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfY-SR-WYU">
                                             <rect key="frame" x="0.0" y="0.0" width="19.5" height="40"/>

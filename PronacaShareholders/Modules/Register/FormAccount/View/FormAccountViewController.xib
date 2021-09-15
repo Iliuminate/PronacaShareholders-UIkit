@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormAccountViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
-                <outlet property="check1" destination="bPJ-If-YXe" id="0Im-MU-Ldz"/>
-                <outlet property="check2" destination="r8I-aN-CWq" id="ysb-gN-fMS"/>
+                <outlet property="check1" destination="i82-hB-hUi" id="AC4-ER-TX6"/>
+                <outlet property="check2" destination="inq-gc-ssm" id="QWX-FN-fa3"/>
                 <outlet property="confirmPassField" destination="6sZ-BE-BNs" id="dfS-fq-fgK"/>
                 <outlet property="descriptionLabel" destination="g4S-ac-JU7" id="mBu-KG-JId"/>
                 <outlet property="idNumberField" destination="XAO-rW-3MU" id="pli-kU-CXZ"/>
@@ -99,13 +99,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vectorcircle" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-If-YXe">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i82-hB-hUi" customClass="UICheckBox" customModule="PronacaShareholders" customModuleProvider="target">
                                                     <rect key="frame" x="340" y="0.0" width="24" height="24"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="DO1-Ri-w9a"/>
-                                                        <constraint firstAttribute="width" constant="24" id="wd0-0R-sNn"/>
+                                                        <constraint firstAttribute="height" constant="24" id="CzT-sw-YbR"/>
+                                                        <constraint firstAttribute="width" constant="24" id="udf-Va-pGw"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaU-kz-imx">
@@ -115,13 +116,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="340" height="24"/>
                                                     <state key="normal" title="Acepto los Téminos y Condiciones"/>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheked" translatesAutoresizingMaskIntoConstraints="NO" id="r8I-aN-CWq">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inq-gc-ssm" customClass="UICheckBox" customModule="PronacaShareholders" customModuleProvider="target">
                                                     <rect key="frame" x="340" y="0.0" width="24" height="24"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="fF9-ht-qZB"/>
-                                                        <constraint firstAttribute="width" constant="24" id="l4a-CP-ReU"/>
+                                                        <constraint firstAttribute="height" constant="24" id="bI5-Of-BwM"/>
+                                                        <constraint firstAttribute="width" constant="24" id="dFf-Du-Bg2"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -176,8 +178,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Vectorcircle" width="72.5" height="72.5"/>
-        <image name="cheked" width="69.5" height="69.5"/>
         <image name="logo" width="647" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

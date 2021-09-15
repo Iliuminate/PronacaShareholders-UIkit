@@ -12,8 +12,8 @@ import UIKit
 
 final class FormAccountViewController: UIViewController {
 
-    @IBOutlet weak var check1: UIImageView!
-    @IBOutlet weak var check2: UIImageView!
+    @IBOutlet weak var check1: UICheckBox!
+    @IBOutlet weak var check2: UICheckBox!
     @IBOutlet weak var confirmPassField: UITextField!
     @IBOutlet weak var idNumberField: UITextField!
     @IBOutlet weak var mailField: UITextField!
@@ -46,6 +46,10 @@ final class FormAccountViewController: UIViewController {
         nameField.delegate = self
         passwordField.delegate = self
         phoneField.delegate = self
+        check1.delegate = self
+        check2.delegate = self
+        check1.tag = 90
+        check2.tag = 91
     }
     
     private func setUpStyles() {
@@ -132,4 +136,11 @@ extension FormAccountViewController: UIScrollViewDelegate {
 
 extension FormAccountViewController: UITextFieldDelegate {
     
+}
+
+extension FormAccountViewController: UICheckBoxDelegate {
+    
+    func selected(state: Bool, tag: Int) {
+        print("CEDA: CHECK-\(tag) -\(state)")
+    }
 }
