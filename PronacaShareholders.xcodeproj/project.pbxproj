@@ -24,6 +24,8 @@
 		0F1B3F8026F0422D0043A966 /* PromotionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B3F7E26F0422D0043A966 /* PromotionsCell.xib */; };
 		0F46BB6B26F2B4DD00CE9CAF /* SectionsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46BB6926F2B4DD00CE9CAF /* SectionsCollectionCell.swift */; };
 		0F46BB6C26F2B4DD00CE9CAF /* SectionsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F46BB6A26F2B4DD00CE9CAF /* SectionsCollectionCell.xib */; };
+		0F46BB6F26F2BA9000CE9CAF /* TrademarksCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46BB6D26F2BA9000CE9CAF /* TrademarksCollectionCell.swift */; };
+		0F46BB7026F2BA9000CE9CAF /* TrademarksCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F46BB6E26F2BA9000CE9CAF /* TrademarksCollectionCell.xib */; };
 		0FC8C45526EEC1230084F353 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45326EEC1230084F353 /* PageController.swift */; };
 		0FC8C45626EEC1230084F353 /* PageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC8C45426EEC1230084F353 /* PageController.xib */; };
 		0FC8C45826EECEE60084F353 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */; };
@@ -97,6 +99,8 @@
 		0F1B3F7E26F0422D0043A966 /* PromotionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsCell.xib; sourceTree = "<group>"; };
 		0F46BB6926F2B4DD00CE9CAF /* SectionsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCollectionCell.swift; sourceTree = "<group>"; };
 		0F46BB6A26F2B4DD00CE9CAF /* SectionsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsCollectionCell.xib; sourceTree = "<group>"; };
+		0F46BB6D26F2BA9000CE9CAF /* TrademarksCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrademarksCollectionCell.swift; sourceTree = "<group>"; };
+		0F46BB6E26F2BA9000CE9CAF /* TrademarksCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrademarksCollectionCell.xib; sourceTree = "<group>"; };
 		0FC8C45326EEC1230084F353 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		0FC8C45426EEC1230084F353 /* PageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageController.xib; sourceTree = "<group>"; };
 		0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			children = (
 				0FD871D026F18A67002BD61D /* Models */,
 				0F1B3F7426F0419A0043A966 /* Cells */,
+				0F46BB7126F2BF4400CE9CAF /* Collections */,
 				0F1B3F6926F03E320043A966 /* HomeViewController.swift */,
 				0F1B3F6B26F03E320043A966 /* HomeViewController.xib */,
 			);
@@ -198,14 +203,23 @@
 			children = (
 				0F1B3F7526F041EF0043A966 /* SectionsCell.swift */,
 				0F1B3F7626F041EF0043A966 /* SectionsCell.xib */,
-				0F46BB6926F2B4DD00CE9CAF /* SectionsCollectionCell.swift */,
-				0F46BB6A26F2B4DD00CE9CAF /* SectionsCollectionCell.xib */,
 				0F1B3F7926F0420A0043A966 /* TrademarksCell.swift */,
 				0F1B3F7A26F0420A0043A966 /* TrademarksCell.xib */,
 				0F1B3F7D26F0422D0043A966 /* PromotionsCell.swift */,
 				0F1B3F7E26F0422D0043A966 /* PromotionsCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F46BB7126F2BF4400CE9CAF /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				0F46BB6926F2B4DD00CE9CAF /* SectionsCollectionCell.swift */,
+				0F46BB6A26F2B4DD00CE9CAF /* SectionsCollectionCell.xib */,
+				0F46BB6D26F2BA9000CE9CAF /* TrademarksCollectionCell.swift */,
+				0F46BB6E26F2BA9000CE9CAF /* TrademarksCollectionCell.xib */,
+			);
+			path = Collections;
 			sourceTree = "<group>";
 		};
 		0FC8C45226EEC0D90084F353 /* SliderWithPageControl */ = {
@@ -538,6 +552,7 @@
 				0FC8C46626EEDB500084F353 /* Montserrat-SemiBold.ttf in Resources */,
 				0F1B3F8026F0422D0043A966 /* PromotionsCell.xib in Resources */,
 				0FD2DB1226EAE8620058ABB9 /* CreateAccountViewController.xib in Resources */,
+				0F46BB7026F2BA9000CE9CAF /* TrademarksCollectionCell.xib in Resources */,
 				0FD2DAD826EAE11C0058ABB9 /* Assets.xcassets in Resources */,
 				0F1B3F7826F041EF0043A966 /* SectionsCell.xib in Resources */,
 				0F1B3F7C26F0420A0043A966 /* TrademarksCell.xib in Resources */,
@@ -626,6 +641,7 @@
 				0FD2DB0326EAE7D60058ABB9 /* InteractorInterface.swift in Sources */,
 				0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */,
 				0FD2DACF26EAE11A0058ABB9 /* AppDelegate.swift in Sources */,
+				0F46BB6F26F2BA9000CE9CAF /* TrademarksCollectionCell.swift in Sources */,
 				0FC8C45526EEC1230084F353 /* PageController.swift in Sources */,
 				0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */,
 				0FD2DB1B26EAE8750058ABB9 /* VerificationCodeInterfaces.swift in Sources */,
