@@ -38,6 +38,7 @@ final class FormAccountViewController: UIViewController {
         configureBackButton()
         setUpStyles()
         setUpFields()
+        setUpScrollView()
     }
     
     private func setUpView() {
@@ -51,6 +52,12 @@ final class FormAccountViewController: UIViewController {
         check2.delegate = self
         check1.tag = 90
         check2.tag = 91
+    }
+    
+    private func setUpScrollView() {
+        scrollView.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func setUpStyles() {

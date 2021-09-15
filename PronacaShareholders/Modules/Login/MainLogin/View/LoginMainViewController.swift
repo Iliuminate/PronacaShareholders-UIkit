@@ -29,6 +29,7 @@ final class LoginMainViewController: UIViewController {
         setUpView()
         addGestureRecognizer()
         setUpFields()
+        setUpScrollView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,13 +53,18 @@ final class LoginMainViewController: UIViewController {
     private func setUpView() {
         emailField.delegate = self
         passwordField.delegate = self
-        scrollView.delegate = self
     }
     
     private func setUpFields() {
         emailField.setLeftImage("mail")
         passwordField.setLeftImage("security")
         passwordField.isSecureTextEntry = true
+    }
+    
+    private func setUpScrollView() {
+        scrollView.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func setUpStyles() {
