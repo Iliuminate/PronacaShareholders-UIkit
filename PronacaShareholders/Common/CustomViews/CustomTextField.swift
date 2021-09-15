@@ -424,7 +424,7 @@ class CustomTextField: UITextField {
     private let rightImagePadding: CGFloat = 6
     
     private var insets: UIEdgeInsets {
-        return UIEdgeInsets(top: .zero, left: 40, bottom: .zero, right: 30)
+        return UIEdgeInsets(top: .zero, left: 38, bottom: .zero, right: rightView == nil ? 2 : 30)
     }
     
     private var heightTextField: CGFloat {
@@ -434,11 +434,13 @@ class CustomTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpStyle()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func draw(_ rect: CGRect) {
         setUpStyle()
     }
     
@@ -452,8 +454,8 @@ class CustomTextField: UITextField {
     
     func setUpStyle() {
         let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: self.frame.height - 2, width: self.frame.width, height: 2)
-        bottomLine.backgroundColor = UIColor.green1.cgColor
+        bottomLine.frame = CGRect(x: 0, y: self.frame.height - 2, width: self.frame.width, height: 1.25)
+        bottomLine.backgroundColor = UIColor.black2.cgColor
         self.borderStyle = .none
         self.layer.addSublayer(bottomLine)
     }

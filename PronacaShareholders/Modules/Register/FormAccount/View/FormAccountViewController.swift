@@ -14,13 +14,13 @@ final class FormAccountViewController: UIViewController {
 
     @IBOutlet weak var check1: UICheckBox!
     @IBOutlet weak var check2: UICheckBox!
-    @IBOutlet weak var confirmPassField: UITextField!
-    @IBOutlet weak var idNumberField: UITextField!
-    @IBOutlet weak var mailField: UITextField!
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var confirmPassField: CustomTextField!
+    @IBOutlet weak var idNumberField: CustomTextField!
+    @IBOutlet weak var mailField: CustomTextField!
+    @IBOutlet weak var nameField: CustomTextField!
     @IBOutlet weak var notificationLabel: UILabel!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var passwordField: CustomTextField!
+    @IBOutlet weak var phoneField: CustomTextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var termButton: UIButton!
@@ -37,6 +37,7 @@ final class FormAccountViewController: UIViewController {
         addGestureRecognizer()
         configureBackButton()
         setUpStyles()
+        setUpFields()
     }
     
     private func setUpView() {
@@ -59,6 +60,17 @@ final class FormAccountViewController: UIViewController {
         descriptionLabel.textColor = .black1
         saveButton.greenButton()
         termButton.greenButton2()
+    }
+    
+    private func setUpFields() {
+        passwordField.setLeftImage("security")
+        confirmPassField.setLeftImage("security")
+        passwordField.isSecureTextEntry = true
+        confirmPassField.isSecureTextEntry = true
+        idNumberField.setLeftImage("cardId")
+        mailField.setLeftImage("mail")
+        nameField.setLeftImage("single")
+        phoneField.setLeftImage("phone")
     }
     
     private func configureBackButton() {

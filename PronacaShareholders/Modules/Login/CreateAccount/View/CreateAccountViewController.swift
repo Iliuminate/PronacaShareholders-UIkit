@@ -14,7 +14,7 @@ final class CreateAccountViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var mailField: UITextField!
+    @IBOutlet weak var mailField: CustomTextField!
     @IBOutlet weak var sendButton: UIButton!
     
     // MARK: - Public properties -
@@ -25,6 +25,7 @@ final class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
         configureBackButton()
         setUpStyles()
+        setUpFields()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +38,10 @@ final class CreateAccountViewController: UIViewController {
         descriptionLabel.font = UIFont(.MontserratRegular, .s12)
         descriptionLabel.textColor = .black1
         sendButton.greenButton()
+    }
+    
+    private func setUpFields() {
+        mailField.setLeftImage("mail")
     }
     
     private func configureBackButton() {

@@ -59,8 +59,6 @@ final class LoginMainViewController: UIViewController {
         emailField.setLeftImage("mail")
         passwordField.setLeftImage("security")
         passwordField.isSecureTextEntry = true
-        emailField.borderStyle = .none
-        passwordField.borderStyle = .none
     }
     
     private func setUpStyles() {

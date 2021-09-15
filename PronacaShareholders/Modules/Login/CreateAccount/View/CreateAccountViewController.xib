@@ -36,7 +36,7 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-yC-zAQ">
-                    <rect key="frame" x="25" y="370.5" width="364" height="105"/>
+                    <rect key="frame" x="25" y="367.5" width="364" height="111"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuerda que para ingresar a la APP de Pronaca. Debes estar registrado en la base de datos de la Empresa." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0p-Rn-hUw">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="61"/>
@@ -44,15 +44,18 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-Ti-bzE">
-                            <rect key="frame" x="0.0" y="71" width="364" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-Ti-bzE" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="71" width="364" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oax-Xm-U9A"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
                         </textField>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-ve-yP1">
-                    <rect key="frame" x="124" y="520.5" width="166" height="30"/>
+                    <rect key="frame" x="124" y="523.5" width="166" height="30"/>
                     <state key="normal" title="Enviar"/>
                     <connections>
                         <action selector="sendButtonAction:" destination="-1" eventType="touchUpInside" id="FuY-Ml-NsW"/>

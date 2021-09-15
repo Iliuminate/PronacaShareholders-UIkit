@@ -36,7 +36,6 @@ final class VerificationCodeViewController: UIViewController {
         configureBackButton()
         setUpStyles()
     }
-
     
     private func setUpTextField() {
         field1.delegate = self

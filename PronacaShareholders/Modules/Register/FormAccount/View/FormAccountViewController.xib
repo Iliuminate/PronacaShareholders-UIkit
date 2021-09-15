@@ -52,43 +52,46 @@
                                         <constraint firstAttribute="height" constant="98" id="Rka-xb-wPn"/>
                                     </constraints>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dft-LO-eWe">
-                                    <rect key="frame" x="25" y="230.5" width="364" height="244"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dft-LO-eWe">
+                                    <rect key="frame" x="25" y="230.5" width="364" height="280"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ci/RUC/Pasaporte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAO-rW-3MU">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ci/RUC/Pasaporte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAO-rW-3MU" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="ajd-R4-vHX"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nef-Qb-T2e">
-                                            <rect key="frame" x="0.0" y="42" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nef-Qb-T2e" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="48" width="364" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-bo-Nmh">
-                                            <rect key="frame" x="0.0" y="84" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-bo-Nmh" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="96" width="364" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-Yg-8er">
-                                            <rect key="frame" x="0.0" y="126" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-Yg-8er" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="144" width="364" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXm-W9-hBu">
-                                            <rect key="frame" x="0.0" y="168" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXm-W9-hBu" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="192" width="364" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sZ-BE-BNs">
-                                            <rect key="frame" x="0.0" y="210" width="364" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sZ-BE-BNs" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="240" width="364" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lSC-o3-wZu">
-                                    <rect key="frame" x="25" y="509.5" width="364" height="56"/>
+                                    <rect key="frame" x="25" y="545.5" width="364" height="56"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uT-C8-XJI">
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="24"/>
@@ -129,7 +132,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMQ-HQ-PdN">
-                                    <rect key="frame" x="103.5" y="620.5" width="207" height="30"/>
+                                    <rect key="frame" x="103.5" y="656.5" width="207" height="30"/>
                                     <state key="normal" title="Guardar"/>
                                     <connections>
                                         <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="306-f7-Cun"/>
