@@ -17,9 +17,15 @@ enum HomeSections: Int, CaseIterable {
     
     var size: CGSize {
         switch self {
-        case .sections: return CGSize(width: UIScreen.main.bounds.width, height: 180.0)
-        case .trademarks: return CGSize(width: UIScreen.main.bounds.width, height: 550.0)
-        case .propotions: return CGSize(width: UIScreen.main.bounds.width, height: 180.0)
+        case .sections:
+            let width = UIScreen.main.bounds.width
+            return CGSize(width: width, height: width * 0.50)
+        case .trademarks:
+            let width = UIScreen.main.bounds.width
+            return CGSize(width: width, height: width * 1.28)
+        case .propotions:
+            let width = UIScreen.main.bounds.width
+            return CGSize(width: width, height: width * 0.50)
         }
     }
 }
@@ -63,6 +69,7 @@ final class HomeViewController: UIViewController {
         mainCollection.dataSource = self
         mainCollection.register(UINib(nibName: "\(SectionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(SectionsCollectionCell.self)")
         mainCollection.register(UINib(nibName: "\(TrademarksCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(TrademarksCollectionCell.self)")
+        mainCollection.register(UINib(nibName: "\(PromotionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(PromotionsCollectionCell.self)")
     }
 }
 
@@ -94,8 +101,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.configure(with: trademarks)
             return cell
         case HomeSections.propotions:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SectionsCollectionCell.self)", for: indexPath) as! SectionsCollectionCell
-            cell.configure(with: sections)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PromotionsCollectionCell.self)", for: indexPath) as! PromotionsCollectionCell
+            cell.configure(with: trademarks)
             return cell
         }
     }
