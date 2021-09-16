@@ -53,7 +53,7 @@ extension PromotionsCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthItem = (collectionView.frame.width / 1.35)
-        let heightItem = widthItem * 0.65
+        let heightItem = widthItem * 0.60
         return CGSize(width: widthItem, height: heightItem)
     }
     

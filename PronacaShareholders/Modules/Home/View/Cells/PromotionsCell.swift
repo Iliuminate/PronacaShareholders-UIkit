@@ -20,7 +20,7 @@ class PromotionsCell: UICollectionViewCell {
     
     private func setUpStyle() {
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 16.0
+        imageView.layer.cornerRadius = 12.0
         imageView.layer.masksToBounds = true
         showMoreButton.greenButton()
     }
