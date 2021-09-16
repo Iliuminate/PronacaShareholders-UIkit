@@ -28,6 +28,9 @@
 		0F46BB7026F2BA9000CE9CAF /* TrademarksCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F46BB6E26F2BA9000CE9CAF /* TrademarksCollectionCell.xib */; };
 		0F46BB7426F2C1DC00CE9CAF /* PromotionsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46BB7226F2C1DC00CE9CAF /* PromotionsCollectionCell.swift */; };
 		0F46BB7526F2C1DC00CE9CAF /* PromotionsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F46BB7326F2C1DC00CE9CAF /* PromotionsCollectionCell.xib */; };
+		0F46BB7826F2CAD800CE9CAF /* HomeHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46BB7626F2CAD800CE9CAF /* HomeHeaderReusableView.swift */; };
+		0F46BB7926F2CAD800CE9CAF /* HomeHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F46BB7726F2CAD800CE9CAF /* HomeHeaderReusableView.xib */; };
+		0F46BB7B26F2CC2700CE9CAF /* HeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46BB7A26F2CC2700CE9CAF /* HeaderItem.swift */; };
 		0FC8C45526EEC1230084F353 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45326EEC1230084F353 /* PageController.swift */; };
 		0FC8C45626EEC1230084F353 /* PageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC8C45426EEC1230084F353 /* PageController.xib */; };
 		0FC8C45826EECEE60084F353 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */; };
@@ -105,6 +108,9 @@
 		0F46BB6E26F2BA9000CE9CAF /* TrademarksCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrademarksCollectionCell.xib; sourceTree = "<group>"; };
 		0F46BB7226F2C1DC00CE9CAF /* PromotionsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCollectionCell.swift; sourceTree = "<group>"; };
 		0F46BB7326F2C1DC00CE9CAF /* PromotionsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsCollectionCell.xib; sourceTree = "<group>"; };
+		0F46BB7626F2CAD800CE9CAF /* HomeHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReusableView.swift; sourceTree = "<group>"; };
+		0F46BB7726F2CAD800CE9CAF /* HomeHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderReusableView.xib; sourceTree = "<group>"; };
+		0F46BB7A26F2CC2700CE9CAF /* HeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderItem.swift; sourceTree = "<group>"; };
 		0FC8C45326EEC1230084F353 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		0FC8C45426EEC1230084F353 /* PageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageController.xib; sourceTree = "<group>"; };
 		0FC8C45726EECEE60084F353 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 				0F1B3F7A26F0420A0043A966 /* TrademarksCell.xib */,
 				0F1B3F7D26F0422D0043A966 /* PromotionsCell.swift */,
 				0F1B3F7E26F0422D0043A966 /* PromotionsCell.xib */,
+				0F46BB7626F2CAD800CE9CAF /* HomeHeaderReusableView.swift */,
+				0F46BB7726F2CAD800CE9CAF /* HomeHeaderReusableView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -466,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD871D126F18A8F002BD61D /* SectionItem.swift */,
+				0F46BB7A26F2CC2700CE9CAF /* HeaderItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -553,6 +562,7 @@
 				0FD2DB2B26EAE8830058ABB9 /* FormAccountViewController.xib in Resources */,
 				0FD2DB1F26EAE8750058ABB9 /* VerificationCodeViewController.xib in Resources */,
 				0FC8C46926EEDB500084F353 /* Montserrat-Bold.ttf in Resources */,
+				0F46BB7926F2CAD800CE9CAF /* HomeHeaderReusableView.xib in Resources */,
 				0FC8C46A26EEDB500084F353 /* OpenSans-Regular.ttf in Resources */,
 				0FC8C45626EEC1230084F353 /* PageController.xib in Resources */,
 				0FC8C46626EEDB500084F353 /* Montserrat-SemiBold.ttf in Resources */,
@@ -641,11 +651,13 @@
 				0FD2DB2026EAE8750058ABB9 /* VerificationCodeWireframe.swift in Sources */,
 				0FD2DB1126EAE8620058ABB9 /* CreateAccountInteractor.swift in Sources */,
 				0FD2DB0226EAE7D60058ABB9 /* ViewInterface.swift in Sources */,
+				0F46BB7B26F2CC2700CE9CAF /* HeaderItem.swift in Sources */,
 				0F1B3F6D26F03E320043A966 /* HomeInterfaces.swift in Sources */,
 				0F1B3F7226F03E320043A966 /* HomeWireframe.swift in Sources */,
 				0FD2DB1026EAE8620058ABB9 /* CreateAccountViewController.swift in Sources */,
 				0FD2DAF326EAE7690058ABB9 /* LoginMainViewController.swift in Sources */,
 				0FD2DB0326EAE7D60058ABB9 /* InteractorInterface.swift in Sources */,
+				0F46BB7826F2CAD800CE9CAF /* HomeHeaderReusableView.swift in Sources */,
 				0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */,
 				0FD2DACF26EAE11A0058ABB9 /* AppDelegate.swift in Sources */,
 				0F46BB6F26F2BA9000CE9CAF /* TrademarksCollectionCell.swift in Sources */,

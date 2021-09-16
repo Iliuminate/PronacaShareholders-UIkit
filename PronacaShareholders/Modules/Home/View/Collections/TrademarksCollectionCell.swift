@@ -25,6 +25,11 @@ class TrademarksCollectionCell: UICollectionViewCell {
         trademarksCollection.delegate = self
         trademarksCollection.dataSource = self
         trademarksCollection.register(UINib(nibName: "\(TrademarksCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(TrademarksCell.self)")
+        trademarksCollection.register(
+            UINib(nibName: "\(HomeHeaderReusableView.self)", bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "\(HomeHeaderReusableView.self)"
+        )
     }
     
     // MARK: - Public methods -
@@ -49,6 +54,21 @@ extension TrademarksCollectionCell: UICollectionViewDelegate, UICollectionViewDa
         cell.configure(with: trademarks[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(HomeHeaderReusableView.self)", for: indexPath) as? HomeHeaderReusableView else {
+                return UICollectionReusableView()
+            }
+            headerView.configure(with: HeaderItem(title: "Marcas", buttonText: "", buttonIsHidden: true))
+            return headerView
+        case UICollectionView.elementKindSectionFooter:
+            return UICollectionReusableView()
+        default:
+            return UICollectionReusableView()
+        }
+    }
 }
 
 extension TrademarksCollectionCell: UICollectionViewDelegateFlowLayout {
@@ -69,5 +89,13 @@ extension TrademarksCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return spacingInterItem * 0.5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: HomeSections.sections.headerHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize.zero
     }
 }

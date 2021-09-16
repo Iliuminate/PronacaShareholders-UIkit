@@ -10,7 +10,6 @@ import UIKit
 class SectionsCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var sectionsCollection: UICollectionView!
-    
     private var sections: [SectionItem] = []
     
     override func awakeFromNib() {
@@ -23,6 +22,11 @@ class SectionsCollectionCell: UICollectionViewCell {
         sectionsCollection.delegate = self
         sectionsCollection.dataSource = self
         sectionsCollection.register(UINib(nibName: "\(SectionsCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(SectionsCell.self)")
+        sectionsCollection.register(
+            UINib(nibName: "\(HomeHeaderReusableView.self)", bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "\(HomeHeaderReusableView.self)"
+        )
     }
     
     // MARK: - Public methods -
@@ -46,6 +50,21 @@ extension SectionsCollectionCell: UICollectionViewDelegate, UICollectionViewData
         cell.configure(with: sections[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(HomeHeaderReusableView.self)", for: indexPath) as? HomeHeaderReusableView else {
+                return UICollectionReusableView()
+            }
+            headerView.configure(with: HeaderItem(title: "Secciones", buttonText: "", buttonIsHidden: true))
+            return headerView
+        case UICollectionView.elementKindSectionFooter:
+            return UICollectionReusableView()
+        default:
+            return UICollectionReusableView()
+        }
+    }
 }
 
 extension SectionsCollectionCell: UICollectionViewDelegateFlowLayout {
@@ -66,5 +85,13 @@ extension SectionsCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: HomeSections.sections.headerHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize.zero
     }
 }

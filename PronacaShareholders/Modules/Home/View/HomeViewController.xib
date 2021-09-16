@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
+                <outlet property="locationField" destination="Nmn-bp-7MY" id="daj-dW-nvW"/>
                 <outlet property="mainCollection" destination="0C3-Ex-pwR" id="BIz-tL-jFH"/>
                 <outlet property="profileImage" destination="LJE-q3-xbo" id="QFw-X9-T2j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,7 +38,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="ygG-Mv-wpX"/>
                                             </constraints>
                                         </imageView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nmn-bp-7MY">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="Río Coca y Bosmediano esquina" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nmn-bp-7MY" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
                                             <rect key="frame" x="24" y="0.0" width="306" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -54,10 +55,11 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kCW-n5-6OP">
                                     <rect key="frame" x="0.0" y="34" width="364" height="30"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPE-h1-by1">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNq-WT-1Rz" customClass="CustomTextField" customModule="PronacaShareholders" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
-                                            <color key="backgroundColor" systemColor="systemGray3Color"/>
-                                        </view>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="LJE-q3-xbo">
                                             <rect key="frame" x="334" y="0.0" width="30" height="30"/>
                                             <constraints>
@@ -108,9 +110,6 @@
         <image name="profile" width="94.5" height="95"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

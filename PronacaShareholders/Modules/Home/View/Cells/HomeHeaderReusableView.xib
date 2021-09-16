@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HomeHeaderReusableView" customModule="PronacaShareholders" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="522" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFf-2V-kLf">
+                    <rect key="frame" x="25" y="0.0" width="472" height="65"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1v0-vS-b4Q">
+                            <rect key="frame" x="0.0" y="0.0" width="392" height="65"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oA-5L-tAd">
+                                    <rect key="frame" x="0.0" y="22.5" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="3oA-5L-tAd" firstAttribute="centerY" secondItem="1v0-vS-b4Q" secondAttribute="centerY" id="K5Y-zV-R7u"/>
+                                <constraint firstItem="3oA-5L-tAd" firstAttribute="leading" secondItem="1v0-vS-b4Q" secondAttribute="leading" id="cGc-ni-mVn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFz-Uv-Iba">
+                            <rect key="frame" x="392" y="0.0" width="80" height="65"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-0O-WJm">
+                                    <rect key="frame" x="12" y="17.5" width="56" height="30"/>
+                                    <state key="normal" title="Ver más"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Us2-0O-WJm" firstAttribute="centerX" secondItem="gFz-Uv-Iba" secondAttribute="centerX" id="AGP-DI-dPg"/>
+                                <constraint firstAttribute="width" constant="80" id="T6A-YP-Ftn"/>
+                                <constraint firstItem="Us2-0O-WJm" firstAttribute="centerY" secondItem="gFz-Uv-Iba" secondAttribute="centerY" id="lVe-xB-8Eq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="yFf-2V-kLf" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="M0B-OA-L5Z"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="yFf-2V-kLf" secondAttribute="trailing" constant="25" id="oPf-He-Px4"/>
+                <constraint firstAttribute="bottom" secondItem="yFf-2V-kLf" secondAttribute="bottom" id="uCZ-DV-x5j"/>
+                <constraint firstItem="yFf-2V-kLf" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="25" id="we2-ut-rQP"/>
+            </constraints>
+            <connections>
+                <outlet property="showMoreButton" destination="Us2-0O-WJm" id="9oy-ss-y0O"/>
+                <outlet property="titleLabel" destination="3oA-5L-tAd" id="onh-sU-zW1"/>
+            </connections>
+            <point key="canvasLocation" x="282.60869565217394" y="64.620535714285708"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

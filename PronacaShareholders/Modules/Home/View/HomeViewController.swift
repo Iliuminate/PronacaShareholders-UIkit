@@ -13,19 +13,27 @@ import UIKit
 enum HomeSections: Int, CaseIterable {
     case sections = 0
     case trademarks = 1
-    case propotions = 2
+    case promotions = 2
     
     var size: CGSize {
         switch self {
         case .sections:
             let width = UIScreen.main.bounds.width
-            return CGSize(width: width, height: width * 0.50)
+            return CGSize(width: width, height: width * 0.50 + headerHeight)
         case .trademarks:
             let width = UIScreen.main.bounds.width
-            return CGSize(width: width, height: width * 1.28)
-        case .propotions:
+            return CGSize(width: width, height: width * 1.28 + headerHeight)
+        case .promotions:
             let width = UIScreen.main.bounds.width
-            return CGSize(width: width, height: width * 0.50)
+            return CGSize(width: width, height: width * 0.50 + headerHeight)
+        }
+    }
+    
+    var headerHeight: CGFloat {
+        switch self {
+        case .sections: return 40.0
+        case .trademarks: return 40.0
+        case .promotions: return 30.0
         }
     }
 }
@@ -34,6 +42,8 @@ final class HomeViewController: UIViewController {
 
     @IBOutlet weak var mainCollection: UICollectionView!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var locationField: CustomTextField!
+    
     
     // MARK: - Public properties -
     var presenter: HomePresenterInterface!
@@ -100,7 +110,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TrademarksCollectionCell.self)", for: indexPath) as! TrademarksCollectionCell
             cell.configure(with: trademarks)
             return cell
-        case HomeSections.propotions:
+        case HomeSections.promotions:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PromotionsCollectionCell.self)", for: indexPath) as! PromotionsCollectionCell
             cell.configure(with: trademarks)
             return cell
