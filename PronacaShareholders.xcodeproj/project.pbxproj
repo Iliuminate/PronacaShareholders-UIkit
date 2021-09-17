@@ -85,6 +85,8 @@
 		0FD871CF26F17293002BD61D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD871CE26F17293002BD61D /* CustomTextField.swift */; };
 		0FD871D226F18A8F002BD61D /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD871D126F18A8F002BD61D /* SectionItem.swift */; };
 		0FE59F6F26F16D5D007F8115 /* UICheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE59F6E26F16D5D007F8115 /* UICheckBox.swift */; };
+		0FED86D326F418210043E454 /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED86D126F418210043E454 /* HomeHeaderCell.swift */; };
+		0FED86D426F418210043E454 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FED86D226F418210043E454 /* HomeHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,8 @@
 		0FD871CE26F17293002BD61D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0FD871D126F18A8F002BD61D /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		0FE59F6E26F16D5D007F8115 /* UICheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICheckBox.swift; sourceTree = "<group>"; };
+		0FED86D126F418210043E454 /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		0FED86D226F418210043E454 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronacaShareholders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9198178BE6A31E7EAA997E /* Pods-PronacaShareholders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronacaShareholders.debug.xcconfig"; path = "Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E3655573E0613B4C110308 /* Pods-PronacaShareholders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronacaShareholders.release.xcconfig"; path = "Target Support Files/Pods-PronacaShareholders/Pods-PronacaShareholders.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				0F1B3F7E26F0422D0043A966 /* PromotionsCell.xib */,
 				0F46BB7626F2CAD800CE9CAF /* HomeHeaderReusableView.swift */,
 				0F46BB7726F2CAD800CE9CAF /* HomeHeaderReusableView.xib */,
+				0FED86D126F418210043E454 /* HomeHeaderCell.swift */,
+				0FED86D226F418210043E454 /* HomeHeaderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				0FC8C46926EEDB500084F353 /* Montserrat-Bold.ttf in Resources */,
 				0F46BB7926F2CAD800CE9CAF /* HomeHeaderReusableView.xib in Resources */,
 				0FC8C46A26EEDB500084F353 /* OpenSans-Regular.ttf in Resources */,
+				0FED86D426F418210043E454 /* HomeHeaderCell.xib in Resources */,
 				0FC8C45626EEC1230084F353 /* PageController.xib in Resources */,
 				0FC8C46626EEDB500084F353 /* Montserrat-SemiBold.ttf in Resources */,
 				0F1B3F8026F0422D0043A966 /* PromotionsCell.xib in Resources */,
@@ -652,6 +659,7 @@
 				0FD2DB1126EAE8620058ABB9 /* CreateAccountInteractor.swift in Sources */,
 				0FD2DB0226EAE7D60058ABB9 /* ViewInterface.swift in Sources */,
 				0F46BB7B26F2CC2700CE9CAF /* HeaderItem.swift in Sources */,
+				0FED86D326F418210043E454 /* HomeHeaderCell.swift in Sources */,
 				0F1B3F6D26F03E320043A966 /* HomeInterfaces.swift in Sources */,
 				0F1B3F7226F03E320043A966 /* HomeWireframe.swift in Sources */,
 				0FD2DB1026EAE8620058ABB9 /* CreateAccountViewController.swift in Sources */,

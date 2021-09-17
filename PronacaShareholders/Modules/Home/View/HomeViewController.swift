@@ -13,7 +13,8 @@ import UIKit
 enum HomeSections: Int, CaseIterable {
     case sections = 0
     case trademarks = 1
-    case promotions = 2
+    case promotionsHeader = 2
+    case promotions = 3
     
     var size: CGSize {
         switch self {
@@ -26,6 +27,9 @@ enum HomeSections: Int, CaseIterable {
         case .promotions:
             let width = UIScreen.main.bounds.width
             return CGSize(width: width, height: width * 0.50 + headerHeight)
+        case .promotionsHeader:
+            let width = UIScreen.main.bounds.width
+            return CGSize(width: width, height: headerHeight)
         }
     }
     
@@ -33,7 +37,8 @@ enum HomeSections: Int, CaseIterable {
         switch self {
         case .sections: return 40.0
         case .trademarks: return 40.0
-        case .promotions: return 30.0
+        case .promotionsHeader: return 40.0
+        case .promotions: return 20.0
         }
     }
 }
@@ -80,6 +85,7 @@ final class HomeViewController: UIViewController {
         mainCollection.register(UINib(nibName: "\(SectionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(SectionsCollectionCell.self)")
         mainCollection.register(UINib(nibName: "\(TrademarksCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(TrademarksCollectionCell.self)")
         mainCollection.register(UINib(nibName: "\(PromotionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(PromotionsCollectionCell.self)")
+        mainCollection.register(UINib(nibName: "\(HomeHeaderCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(HomeHeaderCell.self)")
     }
 }
 
@@ -109,6 +115,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case HomeSections.trademarks:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TrademarksCollectionCell.self)", for: indexPath) as! TrademarksCollectionCell
             cell.configure(with: trademarks)
+            return cell
+        case HomeSections.promotionsHeader:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderCell.self)", for: indexPath) as! HomeHeaderCell
+            cell.configure(with: HeaderItem(title: "Promociones", buttonText: "Ver más", buttonIsHidden: false))
             return cell
         case HomeSections.promotions:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PromotionsCollectionCell.self)", for: indexPath) as! PromotionsCollectionCell
