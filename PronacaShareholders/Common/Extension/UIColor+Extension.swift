@@ -38,6 +38,11 @@ extension UIColor {
         return UIColor(red: 117.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0)
     }
     
+    /// #
+    static var black3: UIColor {
+        return UIColor(red: 225.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+    }
+    
     // MARK: - GREEN -
     
     /// #87BA41

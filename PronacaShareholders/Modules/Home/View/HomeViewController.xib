@@ -11,9 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="PronacaShareholders" customModuleProvider="target">
             <connections>
+                <outlet property="headerContentView" destination="Ufi-Tv-bYw" id="g2O-Pk-ogl"/>
                 <outlet property="locationField" destination="Nmn-bp-7MY" id="daj-dW-nvW"/>
                 <outlet property="mainCollection" destination="0C3-Ex-pwR" id="BIz-tL-jFH"/>
                 <outlet property="profileImage" destination="LJE-q3-xbo" id="QFw-X9-T2j"/>
+                <outlet property="searchField" destination="VNq-WT-1Rz" id="xM2-Ro-yGg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

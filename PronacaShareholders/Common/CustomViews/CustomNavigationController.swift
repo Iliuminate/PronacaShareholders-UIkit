@@ -14,6 +14,13 @@ class CustomNavigationController: UINavigationController {
         setUpStyle()
     }
     
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        let height = CGFloat(75)
+//        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
+//        navigationBar.backgroundColor = .red
+//    }
+    
     private func setUpStyle() {
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationBar.shadowImage = UIImage()
@@ -21,16 +28,13 @@ class CustomNavigationController: UINavigationController {
         self.view.backgroundColor = .clear
     }
     
-    func configureBackBarButton() {
+    func addSearchButton(_ context: UIViewController, _ action: Selector) {
         navigationItem.configureBarButton(
-            imageName: "backArrow",
-            target: self,
-            selector: #selector(backAction),
+            imageName: "search",
+            tintColor: .green2,
+            target: context,
+            selector: action,
             side: .left
         )
-    }
-    
-    @objc private func backAction() {
-        print("CEDA: Is back action")
     }
 }

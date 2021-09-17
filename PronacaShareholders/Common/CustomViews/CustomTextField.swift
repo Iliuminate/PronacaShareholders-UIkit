@@ -417,14 +417,26 @@ extension CustomTextField {
 
  */
 
+enum CustomTextFieldStyles {
+    case regular
+    case search
+}
+
 class CustomTextField: UITextField {
     
-    var customHeightTextField: CGFloat?
     private let leftImagePadding: CGFloat = 6
     private let rightImagePadding: CGFloat = 6
+    var style: CustomTextFieldStyles = .regular
+    var customHeightTextField: CGFloat?
     
     private var insets: UIEdgeInsets {
-        return UIEdgeInsets(top: .zero, left: 38, bottom: .zero, right: rightView == nil ? 2 : 30)
+        switch style {
+        case .regular:
+            return UIEdgeInsets(top: .zero, left: 38, bottom: .zero, right: rightView == nil ? 2 : 30)
+        case .search:
+            return UIEdgeInsets(top: .zero, left: 8, bottom: .zero, right: rightView == nil ? 2 : 30)
+        }
+        
     }
     
     private var heightTextField: CGFloat {
@@ -441,7 +453,10 @@ class CustomTextField: UITextField {
     }
     
     override func draw(_ rect: CGRect) {
-        setUpStyle()
+        switch style {
+        case .regular: setUpStyle()
+        case .search: setUpSearchStyle()
+        }
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -450,14 +465,6 @@ class CustomTextField: UITextField {
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: insets)
-    }
-    
-    func setUpStyle() {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: self.frame.height - 2, width: self.frame.width, height: 1.25)
-        bottomLine.backgroundColor = UIColor.black2.cgColor
-        self.borderStyle = .none
-        self.layer.addSublayer(bottomLine)
     }
     
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
@@ -481,14 +488,35 @@ class CustomTextField: UITextField {
             height: rectSize.height)
     }
     
-    func setRightImage(_ imageName: String) {
+    // MARK: - Styles -
+    private func setUpStyle() {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.height - 2, width: self.frame.width, height: 1.25)
+        bottomLine.backgroundColor = UIColor.black2.cgColor
+        self.borderStyle = .none
+        self.layer.addSublayer(bottomLine)
+    }
+    
+    private func setUpSearchStyle() {
+        self.borderStyle = .roundedRect
+        self.backgroundColor = .black3
+        self.layer.borderColor = UIColor.black3.cgColor
+    }
+    
+    // MARK: - Public methods-
+    
+    func setRightImage(_ imageName: String, viewMode: ViewMode = .unlessEditing, clearMode: ViewMode = .whileEditing ) {
         guard let image = UIImage(named: imageName) else { return }
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         rightView = imageView
-        rightViewMode = .unlessEditing
-        clearButtonMode = .whileEditing
+        rightViewMode = viewMode
+        clearButtonMode = clearMode
+    }
+    
+    func setRightImageWithPersistence(_ imageName: String) {
+        setRightImage(imageName, viewMode: .always, clearMode: .never)
     }
     
     func setLeftImage(_ imageName: String) {

@@ -48,6 +48,8 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var mainCollection: UICollectionView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var locationField: CustomTextField!
+    @IBOutlet weak var searchField: CustomTextField!
+    @IBOutlet weak var headerContentView: UIView!
     
     
     // MARK: - Public properties -
@@ -77,9 +79,29 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        setUpCollection()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let navigation = navigationController else { return }
+    }
+    
     private func setUpView() {
+        searchField.style = .search
+    }
+    
+    private func setUpCollection() {
         mainCollection.delegate = self
         mainCollection.dataSource = self
         mainCollection.register(UINib(nibName: "\(SectionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(SectionsCollectionCell.self)")
