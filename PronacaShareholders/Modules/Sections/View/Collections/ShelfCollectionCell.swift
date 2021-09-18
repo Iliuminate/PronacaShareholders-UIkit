@@ -45,7 +45,7 @@ class ShelfCollectionCell: UICollectionViewCell {
     }
     
     private func setUpStyle() {
-        productsCollection.backgroundColor = UIColor.orange
+        productsCollection.backgroundColor = .clear
         titleLabel.font = UIFont(.MontserratSemiBold, .s14)
         titleLabel.textColor = .black1
     }
@@ -98,7 +98,7 @@ extension ShelfCollectionCell: UICollectionViewDelegate, UICollectionViewDataSou
 extension ShelfCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         return CGSize(width: 100.0, height: collectionView.bounds.height)
+         return CGSize(width: 110.0, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

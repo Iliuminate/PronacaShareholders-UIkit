@@ -20,6 +20,8 @@ enum LocalFonts: String {
 }
 
 enum LocalFontSize: CGFloat {
+    case s8 = 8.0
+    case s10 = 10.0
     case s12 = 12.0
     case s14 = 14.0
     case s16 = 16.0

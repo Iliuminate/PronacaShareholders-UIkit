@@ -32,6 +32,8 @@
 		0F10A7C226F6686400AF41C5 /* ShelfCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7C026F6686400AF41C5 /* ShelfCollectionCell.xib */; };
 		0F10A7C526F6870E00AF41C5 /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */; };
 		0F10A7C626F6870E00AF41C5 /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */; };
+		0F10A7C826F694BC00AF41C5 /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7C726F694BC00AF41C5 /* ButtonItem.swift */; };
+		0F10A7CA26F695B200AF41C5 /* ButtonItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7C926F695B200AF41C5 /* ButtonItem.xib */; };
 		0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6226F033450043A966 /* CustomNavigationController.swift */; };
 		0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */; };
 		0F1B3F6D26F03E320043A966 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6726F03E320043A966 /* HomeInterfaces.swift */; };
@@ -138,6 +140,8 @@
 		0F10A7C026F6686400AF41C5 /* ShelfCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShelfCollectionCell.xib; sourceTree = "<group>"; };
 		0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
 		0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
+		0F10A7C726F694BC00AF41C5 /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
+		0F10A7C926F695B200AF41C5 /* ButtonItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonItem.xib; sourceTree = "<group>"; };
 		0F1B3F6226F033450043A966 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		0F1B3F6726F03E320043A966 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				0F10A7BC26F640A900AF41C5 /* ShelfCell.xib */,
 				0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */,
 				0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */,
+				0F10A7C726F694BC00AF41C5 /* ButtonItem.swift */,
+				0F10A7C926F695B200AF41C5 /* ButtonItem.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -702,6 +708,7 @@
 				0FC8C46A26EEDB500084F353 /* OpenSans-Regular.ttf in Resources */,
 				0FED86D426F418210043E454 /* HomeHeaderCell.xib in Resources */,
 				0FC8C45626EEC1230084F353 /* PageController.xib in Resources */,
+				0F10A7CA26F695B200AF41C5 /* ButtonItem.xib in Resources */,
 				0FC8C46626EEDB500084F353 /* Montserrat-SemiBold.ttf in Resources */,
 				0F1B3F8026F0422D0043A966 /* PromotionsCell.xib in Resources */,
 				0F46BB7526F2C1DC00CE9CAF /* PromotionsCollectionCell.xib in Resources */,
@@ -819,6 +826,7 @@
 				0F10A7B326F6313000AF41C5 /* CartViewController.swift in Sources */,
 				0F10A7B626F6313000AF41C5 /* CartWireframe.swift in Sources */,
 				0FC8C46D26EEDBF30084F353 /* UIFont+Extension.swift in Sources */,
+				0F10A7C826F694BC00AF41C5 /* ButtonItem.swift in Sources */,
 				0FD2DB1E26EAE8750058ABB9 /* VerificationCodeInteractor.swift in Sources */,
 				0FD2DAF426EAE7690058ABB9 /* LoginMainInteractor.swift in Sources */,
 				0FD2DB1326EAE8620058ABB9 /* CreateAccountWireframe.swift in Sources */,
