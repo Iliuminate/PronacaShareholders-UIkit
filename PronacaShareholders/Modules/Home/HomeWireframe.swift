@@ -28,4 +28,9 @@ final class HomeWireframe: BaseWireframe<HomeViewController> {
 // MARK: - Extensions -
 
 extension HomeWireframe: HomeWireframeInterface {
+    
+    func goToDetail() {
+        let nextView = SectionsWireframe()
+        self.navigationController?.pushWireframe(nextView)
+    }
 }

@@ -8,6 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		08751DF1495829B081BB6170 /* Pods_PronacaShareholders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F480DF8301EDE3958FFA97B /* Pods_PronacaShareholders.framework */; };
+		0F10A79926F6310000AF41C5 /* SectionsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79326F6310000AF41C5 /* SectionsInterfaces.swift */; };
+		0F10A79A26F6310000AF41C5 /* SectionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79426F6310000AF41C5 /* SectionsPresenter.swift */; };
+		0F10A79B26F6310000AF41C5 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79526F6310000AF41C5 /* SectionsViewController.swift */; };
+		0F10A79C26F6310000AF41C5 /* SectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79626F6310000AF41C5 /* SectionsInteractor.swift */; };
+		0F10A79D26F6310000AF41C5 /* SectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A79726F6310000AF41C5 /* SectionsViewController.xib */; };
+		0F10A79E26F6310000AF41C5 /* SectionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79826F6310000AF41C5 /* SectionsWireframe.swift */; };
+		0F10A7A526F6310E00AF41C5 /* DetailSectionInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A79F26F6310E00AF41C5 /* DetailSectionInterfaces.swift */; };
+		0F10A7A626F6310E00AF41C5 /* DetailSectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7A026F6310E00AF41C5 /* DetailSectionPresenter.swift */; };
+		0F10A7A726F6310E00AF41C5 /* DetailSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7A126F6310E00AF41C5 /* DetailSectionViewController.swift */; };
+		0F10A7A826F6310E00AF41C5 /* DetailSectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7A226F6310E00AF41C5 /* DetailSectionInteractor.swift */; };
+		0F10A7A926F6310E00AF41C5 /* DetailSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7A326F6310E00AF41C5 /* DetailSectionViewController.xib */; };
+		0F10A7AA26F6310E00AF41C5 /* DetailSectionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7A426F6310E00AF41C5 /* DetailSectionWireframe.swift */; };
+		0F10A7B126F6313000AF41C5 /* CartInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7AB26F6313000AF41C5 /* CartInterfaces.swift */; };
+		0F10A7B226F6313000AF41C5 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7AC26F6313000AF41C5 /* CartPresenter.swift */; };
+		0F10A7B326F6313000AF41C5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7AD26F6313000AF41C5 /* CartViewController.swift */; };
+		0F10A7B426F6313000AF41C5 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7AE26F6313000AF41C5 /* CartInteractor.swift */; };
+		0F10A7B526F6313000AF41C5 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7AF26F6313000AF41C5 /* CartViewController.xib */; };
+		0F10A7B626F6313000AF41C5 /* CartWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7B026F6313000AF41C5 /* CartWireframe.swift */; };
+		0F10A7BD26F640A900AF41C5 /* ShelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7BB26F640A900AF41C5 /* ShelfCell.swift */; };
+		0F10A7BE26F640A900AF41C5 /* ShelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7BC26F640A900AF41C5 /* ShelfCell.xib */; };
+		0F10A7C126F6686400AF41C5 /* ShelfCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7BF26F6686400AF41C5 /* ShelfCollectionCell.swift */; };
+		0F10A7C226F6686400AF41C5 /* ShelfCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7C026F6686400AF41C5 /* ShelfCollectionCell.xib */; };
+		0F10A7C526F6870E00AF41C5 /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */; };
+		0F10A7C626F6870E00AF41C5 /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */; };
 		0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6226F033450043A966 /* CustomNavigationController.swift */; };
 		0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */; };
 		0F1B3F6D26F03E320043A966 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B3F6726F03E320043A966 /* HomeInterfaces.swift */; };
@@ -90,6 +114,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F10A79326F6310000AF41C5 /* SectionsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsInterfaces.swift; sourceTree = "<group>"; };
+		0F10A79426F6310000AF41C5 /* SectionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsPresenter.swift; sourceTree = "<group>"; };
+		0F10A79526F6310000AF41C5 /* SectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
+		0F10A79626F6310000AF41C5 /* SectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsInteractor.swift; sourceTree = "<group>"; };
+		0F10A79726F6310000AF41C5 /* SectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsViewController.xib; sourceTree = "<group>"; };
+		0F10A79826F6310000AF41C5 /* SectionsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsWireframe.swift; sourceTree = "<group>"; };
+		0F10A79F26F6310E00AF41C5 /* DetailSectionInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionInterfaces.swift; sourceTree = "<group>"; };
+		0F10A7A026F6310E00AF41C5 /* DetailSectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionPresenter.swift; sourceTree = "<group>"; };
+		0F10A7A126F6310E00AF41C5 /* DetailSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionViewController.swift; sourceTree = "<group>"; };
+		0F10A7A226F6310E00AF41C5 /* DetailSectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionInteractor.swift; sourceTree = "<group>"; };
+		0F10A7A326F6310E00AF41C5 /* DetailSectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSectionViewController.xib; sourceTree = "<group>"; };
+		0F10A7A426F6310E00AF41C5 /* DetailSectionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionWireframe.swift; sourceTree = "<group>"; };
+		0F10A7AB26F6313000AF41C5 /* CartInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInterfaces.swift; sourceTree = "<group>"; };
+		0F10A7AC26F6313000AF41C5 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
+		0F10A7AD26F6313000AF41C5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		0F10A7AE26F6313000AF41C5 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
+		0F10A7AF26F6313000AF41C5 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		0F10A7B026F6313000AF41C5 /* CartWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartWireframe.swift; sourceTree = "<group>"; };
+		0F10A7BB26F640A900AF41C5 /* ShelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCell.swift; sourceTree = "<group>"; };
+		0F10A7BC26F640A900AF41C5 /* ShelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShelfCell.xib; sourceTree = "<group>"; };
+		0F10A7BF26F6686400AF41C5 /* ShelfCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCollectionCell.swift; sourceTree = "<group>"; };
+		0F10A7C026F6686400AF41C5 /* ShelfCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShelfCollectionCell.xib; sourceTree = "<group>"; };
+		0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
+		0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
 		0F1B3F6226F033450043A966 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		0F1B3F6426F035760043A966 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		0F1B3F6726F03E320043A966 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
@@ -188,6 +236,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F10A79026F630BF00AF41C5 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A7B726F6313B00AF41C5 /* View */,
+				0F10A79326F6310000AF41C5 /* SectionsInterfaces.swift */,
+				0F10A79426F6310000AF41C5 /* SectionsPresenter.swift */,
+				0F10A79626F6310000AF41C5 /* SectionsInteractor.swift */,
+				0F10A79826F6310000AF41C5 /* SectionsWireframe.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		0F10A79126F630CD00AF41C5 /* DetailSection */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A79F26F6310E00AF41C5 /* DetailSectionInterfaces.swift */,
+				0F10A7A026F6310E00AF41C5 /* DetailSectionPresenter.swift */,
+				0F10A7A126F6310E00AF41C5 /* DetailSectionViewController.swift */,
+				0F10A7A226F6310E00AF41C5 /* DetailSectionInteractor.swift */,
+				0F10A7A326F6310E00AF41C5 /* DetailSectionViewController.xib */,
+				0F10A7A426F6310E00AF41C5 /* DetailSectionWireframe.swift */,
+			);
+			path = DetailSection;
+			sourceTree = "<group>";
+		};
+		0F10A79226F630E000AF41C5 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A7AB26F6313000AF41C5 /* CartInterfaces.swift */,
+				0F10A7AC26F6313000AF41C5 /* CartPresenter.swift */,
+				0F10A7AD26F6313000AF41C5 /* CartViewController.swift */,
+				0F10A7AE26F6313000AF41C5 /* CartInteractor.swift */,
+				0F10A7AF26F6313000AF41C5 /* CartViewController.xib */,
+				0F10A7B026F6313000AF41C5 /* CartWireframe.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		0F10A7B726F6313B00AF41C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A7BA26F6316C00AF41C5 /* Model */,
+				0F10A7B826F6314100AF41C5 /* Cells */,
+				0F10A7B926F6316000AF41C5 /* Collections */,
+				0F10A79526F6310000AF41C5 /* SectionsViewController.swift */,
+				0F10A79726F6310000AF41C5 /* SectionsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F10A7B826F6314100AF41C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A7BB26F640A900AF41C5 /* ShelfCell.swift */,
+				0F10A7BC26F640A900AF41C5 /* ShelfCell.xib */,
+				0F10A7C326F6870E00AF41C5 /* ProductItemCell.swift */,
+				0F10A7C426F6870E00AF41C5 /* ProductItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F10A7B926F6316000AF41C5 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				0F10A7BF26F6686400AF41C5 /* ShelfCollectionCell.swift */,
+				0F10A7C026F6686400AF41C5 /* ShelfCollectionCell.xib */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		0F10A7BA26F6316C00AF41C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0F1B3F6626F03E1E0043A966 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +442,9 @@
 		0FD2DAE526EAE1860058ABB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0F10A79226F630E000AF41C5 /* Cart */,
+				0F10A79126F630CD00AF41C5 /* DetailSection */,
+				0F10A79026F630BF00AF41C5 /* Sections */,
 				0F1B3F6626F03E1E0043A966 /* Home */,
 				0FC8C45226EEC0D90084F353 /* SliderWithPageControl */,
 				0FD2DAE726EAE1960058ABB9 /* Register */,
@@ -564,9 +692,11 @@
 				0FC8C46326EEDB500084F353 /* Montserrat-Regular.ttf in Resources */,
 				0FD2DADB26EAE11C0058ABB9 /* LaunchScreen.storyboard in Resources */,
 				0FD2DAF526EAE7690058ABB9 /* LoginMainViewController.xib in Resources */,
+				0F10A7A926F6310E00AF41C5 /* DetailSectionViewController.xib in Resources */,
 				0FC8C46B26EEDB500084F353 /* OpenSans-Bold.ttf in Resources */,
 				0FD2DB2B26EAE8830058ABB9 /* FormAccountViewController.xib in Resources */,
 				0FD2DB1F26EAE8750058ABB9 /* VerificationCodeViewController.xib in Resources */,
+				0F10A7B526F6313000AF41C5 /* CartViewController.xib in Resources */,
 				0FC8C46926EEDB500084F353 /* Montserrat-Bold.ttf in Resources */,
 				0F46BB7926F2CAD800CE9CAF /* HomeHeaderReusableView.xib in Resources */,
 				0FC8C46A26EEDB500084F353 /* OpenSans-Regular.ttf in Resources */,
@@ -576,14 +706,18 @@
 				0F1B3F8026F0422D0043A966 /* PromotionsCell.xib in Resources */,
 				0F46BB7526F2C1DC00CE9CAF /* PromotionsCollectionCell.xib in Resources */,
 				0FD2DB1226EAE8620058ABB9 /* CreateAccountViewController.xib in Resources */,
+				0F10A79D26F6310000AF41C5 /* SectionsViewController.xib in Resources */,
 				0F46BB7026F2BA9000CE9CAF /* TrademarksCollectionCell.xib in Resources */,
 				0FD2DAD826EAE11C0058ABB9 /* Assets.xcassets in Resources */,
+				0F10A7C626F6870E00AF41C5 /* ProductItemCell.xib in Resources */,
 				0F1B3F7826F041EF0043A966 /* SectionsCell.xib in Resources */,
 				0F1B3F7C26F0420A0043A966 /* TrademarksCell.xib in Resources */,
 				0FC8C46726EEDB500084F353 /* Raleway-Light.ttf in Resources */,
 				0FC8C46826EEDB500084F353 /* Roboto-Medium.ttf in Resources */,
 				0FC8C46426EEDB500084F353 /* CenturyGothic.ttc in Resources */,
 				0FC8C46526EEDB500084F353 /* Montserrat-Medium.ttf in Resources */,
+				0F10A7BE26F640A900AF41C5 /* ShelfCell.xib in Resources */,
+				0F10A7C226F6686400AF41C5 /* ShelfCollectionCell.xib in Resources */,
 				0FD2DAD626EAE11A0058ABB9 /* Main.storyboard in Resources */,
 				0F1B3F7126F03E320043A966 /* HomeViewController.xib in Resources */,
 				0F46BB6C26F2B4DD00CE9CAF /* SectionsCollectionCell.xib in Resources */,
@@ -644,7 +778,9 @@
 				0FD2DAFF26EAE7D60058ABB9 /* FormatterInterface.swift in Sources */,
 				0FE59F6F26F16D5D007F8115 /* UICheckBox.swift in Sources */,
 				0FD871CF26F17293002BD61D /* CustomTextField.swift in Sources */,
+				0F10A7A726F6310E00AF41C5 /* DetailSectionViewController.swift in Sources */,
 				0F1B3F7026F03E320043A966 /* HomeInteractor.swift in Sources */,
+				0F10A79B26F6310000AF41C5 /* SectionsViewController.swift in Sources */,
 				0FC8C46F26EEE0B30084F353 /* UIButton+Extension.swift in Sources */,
 				0FD2DAFE26EAE7D60058ABB9 /* BaseWireframe.swift in Sources */,
 				0FD2DB2826EAE8830058ABB9 /* FormAccountPresenter.swift in Sources */,
@@ -656,14 +792,19 @@
 				0F1B3F6F26F03E320043A966 /* HomeViewController.swift in Sources */,
 				0F1B3F7B26F0420A0043A966 /* TrademarksCell.swift in Sources */,
 				0FD2DB2026EAE8750058ABB9 /* VerificationCodeWireframe.swift in Sources */,
+				0F10A7C526F6870E00AF41C5 /* ProductItemCell.swift in Sources */,
+				0F10A7A826F6310E00AF41C5 /* DetailSectionInteractor.swift in Sources */,
 				0FD2DB1126EAE8620058ABB9 /* CreateAccountInteractor.swift in Sources */,
+				0F10A7A626F6310E00AF41C5 /* DetailSectionPresenter.swift in Sources */,
 				0FD2DB0226EAE7D60058ABB9 /* ViewInterface.swift in Sources */,
 				0F46BB7B26F2CC2700CE9CAF /* HeaderItem.swift in Sources */,
 				0FED86D326F418210043E454 /* HomeHeaderCell.swift in Sources */,
+				0F10A7AA26F6310E00AF41C5 /* DetailSectionWireframe.swift in Sources */,
 				0F1B3F6D26F03E320043A966 /* HomeInterfaces.swift in Sources */,
 				0F1B3F7226F03E320043A966 /* HomeWireframe.swift in Sources */,
 				0FD2DB1026EAE8620058ABB9 /* CreateAccountViewController.swift in Sources */,
 				0FD2DAF326EAE7690058ABB9 /* LoginMainViewController.swift in Sources */,
+				0F10A79E26F6310000AF41C5 /* SectionsWireframe.swift in Sources */,
 				0FD2DB0326EAE7D60058ABB9 /* InteractorInterface.swift in Sources */,
 				0F46BB7826F2CAD800CE9CAF /* HomeHeaderReusableView.swift in Sources */,
 				0FD2DAF226EAE7690058ABB9 /* LoginMainPresenter.swift in Sources */,
@@ -671,8 +812,12 @@
 				0F46BB6F26F2BA9000CE9CAF /* TrademarksCollectionCell.swift in Sources */,
 				0FC8C45526EEC1230084F353 /* PageController.swift in Sources */,
 				0F1B3F6526F035760043A966 /* UINavigationItem+Extension.swift in Sources */,
+				0F10A7B426F6313000AF41C5 /* CartInteractor.swift in Sources */,
 				0FD2DB1B26EAE8750058ABB9 /* VerificationCodeInterfaces.swift in Sources */,
+				0F10A7BD26F640A900AF41C5 /* ShelfCell.swift in Sources */,
 				0FD2DAD126EAE11A0058ABB9 /* SceneDelegate.swift in Sources */,
+				0F10A7B326F6313000AF41C5 /* CartViewController.swift in Sources */,
+				0F10A7B626F6313000AF41C5 /* CartWireframe.swift in Sources */,
 				0FC8C46D26EEDBF30084F353 /* UIFont+Extension.swift in Sources */,
 				0FD2DB1E26EAE8750058ABB9 /* VerificationCodeInteractor.swift in Sources */,
 				0FD2DAF426EAE7690058ABB9 /* LoginMainInteractor.swift in Sources */,
@@ -682,14 +827,21 @@
 				0F46BB7426F2C1DC00CE9CAF /* PromotionsCollectionCell.swift in Sources */,
 				0FD2DB2A26EAE8830058ABB9 /* FormAccountInteractor.swift in Sources */,
 				0FD2DB2926EAE8830058ABB9 /* FormAccountViewController.swift in Sources */,
+				0F10A7A526F6310E00AF41C5 /* DetailSectionInterfaces.swift in Sources */,
+				0F10A79A26F6310000AF41C5 /* SectionsPresenter.swift in Sources */,
+				0F10A79C26F6310000AF41C5 /* SectionsInteractor.swift in Sources */,
+				0F10A7C126F6686400AF41C5 /* ShelfCollectionCell.swift in Sources */,
 				0FD2DAE426EAE15F0058ABB9 /* UIColor+Extension.swift in Sources */,
 				0F1B3F7726F041EF0043A966 /* SectionsCell.swift in Sources */,
+				0F10A79926F6310000AF41C5 /* SectionsInterfaces.swift in Sources */,
 				0FD2DB0E26EAE8620058ABB9 /* CreateAccountInterfaces.swift in Sources */,
+				0F10A7B226F6313000AF41C5 /* CartPresenter.swift in Sources */,
 				0F1B3F6E26F03E320043A966 /* HomePresenter.swift in Sources */,
 				0FD2DB0026EAE7D60058ABB9 /* UIStoryboardExtension.swift in Sources */,
 				0F46BB6B26F2B4DD00CE9CAF /* SectionsCollectionCell.swift in Sources */,
 				0FD2DAF126EAE7690058ABB9 /* LoginMainInterfaces.swift in Sources */,
 				0FD2DB2726EAE8830058ABB9 /* FormAccountInterfaces.swift in Sources */,
+				0F10A7B126F6313000AF41C5 /* CartInterfaces.swift in Sources */,
 				0FD871D226F18A8F002BD61D /* SectionItem.swift in Sources */,
 				0F1B3F6326F033460043A966 /* CustomNavigationController.swift in Sources */,
 			);

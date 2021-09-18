@@ -111,8 +111,9 @@ final class FormAccountViewController: UIViewController {
             options: .curveLinear,
             animations: {},
             completion: { _ in
-                let navigation = CustomNavigationController(rootViewController: HomeViewController())
-                self.view.window?.rootViewController = navigation
+                //let navigation = CustomNavigationController(rootViewController: HomeViewController())
+                //self.view.window?.rootViewController = navigation
+                self.navigationController?.setRootWireframe(HomeWireframe())
             }
         )
         

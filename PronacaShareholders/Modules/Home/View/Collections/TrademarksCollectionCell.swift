@@ -15,6 +15,8 @@ class TrademarksCollectionCell: UICollectionViewCell {
     private let spacingInterItem: CGFloat = 50
     private var trademarks: [SectionItem] = []
     
+    weak var delegate: HomeSectionsDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()
@@ -51,7 +53,8 @@ extension TrademarksCollectionCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TrademarksCell.self)", for: indexPath) as! TrademarksCell
-        cell.configure(with: trademarks[indexPath.row])
+        cell.delegate = self
+        cell.configure(with: trademarks[indexPath.row], indexPath: indexPath)
         return cell
     }
     
@@ -97,5 +100,12 @@ extension TrademarksCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize.zero
+    }
+}
+
+extension TrademarksCollectionCell: TrademarksCellDelegate {
+    
+    func selectedSection(indexPath: IndexPath) {
+        delegate?.selectedHomeSection(type: .trademarks, indexPath: indexPath)
     }
 }

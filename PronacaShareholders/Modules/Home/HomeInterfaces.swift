@@ -11,12 +11,14 @@
 import UIKit
 
 protocol HomeWireframeInterface: WireframeInterface {
+    func goToDetail()
 }
 
 protocol HomeViewInterface: ViewInterface {
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func goToDetail()
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

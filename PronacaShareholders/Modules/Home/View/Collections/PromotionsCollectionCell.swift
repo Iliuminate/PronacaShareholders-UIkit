@@ -14,6 +14,8 @@ class PromotionsCollectionCell: UICollectionViewCell {
     private let spacingInterItem: CGFloat = 12.0
     private var promotions: [SectionItem] = []
     
+    weak var delegate: HomeSectionsDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()
@@ -44,7 +46,8 @@ extension PromotionsCollectionCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PromotionsCell.self)", for: indexPath) as! PromotionsCell
-        cell.configure(with: promotions[indexPath.row])
+        cell.delegate = self
+        cell.configure(with: promotions[indexPath.row], indexPath: indexPath)
         return cell
     }
 }
@@ -62,3 +65,9 @@ extension PromotionsCollectionCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension PromotionsCollectionCell: PromotionsCellDelegate {
+    
+    func selectedSection(indexPath: IndexPath) {
+        delegate?.selectedHomeSection(type: .promotions, indexPath: indexPath)
+    }
+}

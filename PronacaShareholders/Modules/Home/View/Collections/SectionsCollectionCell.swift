@@ -12,6 +12,8 @@ class SectionsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var sectionsCollection: UICollectionView!
     private var sections: [SectionItem] = []
     
+    weak var delegate: HomeSectionsDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()
@@ -47,7 +49,8 @@ extension SectionsCollectionCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SectionsCell.self)", for: indexPath) as! SectionsCell
-        cell.configure(with: sections[indexPath.row])
+        cell.delegate = self
+        cell.configure(with: sections[indexPath.row], indexPath: indexPath)
         return cell
     }
     
@@ -93,5 +96,12 @@ extension SectionsCollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize.zero
+    }
+}
+
+extension SectionsCollectionCell: SectionsCellDelegate {
+    
+    func selectedSection(indexPath: IndexPath) {
+        delegate?.selectedHomeSection(type: .sections, indexPath: indexPath)
     }
 }

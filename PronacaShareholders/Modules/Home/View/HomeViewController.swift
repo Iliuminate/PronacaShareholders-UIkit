@@ -10,6 +10,10 @@
 
 import UIKit
 
+protocol HomeSectionsDelegate: AnyObject {
+    func selectedHomeSection(type: HomeSections, indexPath: IndexPath)
+}
+
 enum HomeSections: Int, CaseIterable {
     case sections = 0
     case trademarks = 1
@@ -112,10 +116,10 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - Extensions -
-
 extension HomeViewController: HomeViewInterface {
 }
 
+// MARK: - UICollectionViewDelegate -
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -132,10 +136,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch section {
         case HomeSections.sections:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SectionsCollectionCell.self)", for: indexPath) as! SectionsCollectionCell
+            cell.delegate = self
             cell.configure(with: sections)
             return cell
         case HomeSections.trademarks:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TrademarksCollectionCell.self)", for: indexPath) as! TrademarksCollectionCell
+            cell.delegate = self
             cell.configure(with: trademarks)
             return cell
         case HomeSections.promotionsHeader:
@@ -144,12 +150,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         case HomeSections.promotions:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PromotionsCollectionCell.self)", for: indexPath) as! PromotionsCollectionCell
+            cell.delegate = self
             cell.configure(with: trademarks)
             return cell
         }
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout -
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -167,5 +175,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+// MARK: - HomeSectionsDelegate -
+extension HomeViewController: HomeSectionsDelegate {
+    func selectedHomeSection(type: HomeSections, indexPath: IndexPath) {
+        print("CEDA: selectedHomeSection-\(type)")
+        presenter.goToDetail()
     }
 }
