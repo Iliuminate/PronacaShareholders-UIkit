@@ -113,6 +113,10 @@ final class HomeViewController: UIViewController {
         mainCollection.register(UINib(nibName: "\(PromotionsCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(PromotionsCollectionCell.self)")
         mainCollection.register(UINib(nibName: "\(HomeHeaderCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(HomeHeaderCell.self)")
     }
+    
+    private func addCartButton() {
+        
+    }
 }
 
 // MARK: - Extensions -
@@ -166,7 +170,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 4, left: 25, bottom: 4, right: 25)
+        switch section {
+        case HomeSections.trademarks.rawValue:
+            return UIEdgeInsets(top: 4, left: 25, bottom: 32, right: 25)
+        default:
+            return UIEdgeInsets(top: 4, left: 25, bottom: 4, right: 25)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

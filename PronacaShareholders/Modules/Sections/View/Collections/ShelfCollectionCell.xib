@@ -29,7 +29,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-eW-DB0">
-                        <rect key="frame" x="0.0" y="0.0" width="266" height="34"/>
+                        <rect key="frame" x="25" y="0.0" width="241" height="34"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YsM-Sg-Aej">
                                 <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -49,13 +49,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elemento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cb-D0-rvh">
-                                <rect key="frame" x="34" y="0.0" width="112" height="34"/>
+                                <rect key="frame" x="34" y="0.0" width="87" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyp-Cz-a6m">
-                                <rect key="frame" x="146" y="0.0" width="120" height="34"/>
+                                <rect key="frame" x="121" y="0.0" width="120" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="9Ba-sW-UiQ"/>
                                 </constraints>
@@ -79,7 +79,7 @@
                 <constraint firstItem="cZH-eW-DB0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fBE-a1-mUb"/>
                 <constraint firstAttribute="bottom" secondItem="DDx-Cv-siV" secondAttribute="bottom" id="ggh-vM-vXP"/>
                 <constraint firstItem="DDx-Cv-siV" firstAttribute="top" secondItem="cZH-eW-DB0" secondAttribute="bottom" id="vhM-oi-fId"/>
-                <constraint firstItem="cZH-eW-DB0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xNL-CK-llI"/>
+                <constraint firstItem="cZH-eW-DB0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="xNL-CK-llI"/>
             </constraints>
             <size key="customSize" width="266" height="153"/>
             <connections>

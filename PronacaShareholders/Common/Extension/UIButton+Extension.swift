@@ -27,6 +27,11 @@ extension UIButton {
         self.titleLabel?.attributedText = attributedText
     }
     
+    func greenButton3() {
+        self.setTitleColor(.green2, for: .normal)
+        self.titleLabel?.font = UIFont(name: LocalFonts.MontserratBold.rawValue, size: LocalFontSize.s12.rawValue)!
+    }
+    
     func redButton(font: UIFont) {
         self.setTitleColor(.red1, for: .normal)
         self.titleLabel?.font = font

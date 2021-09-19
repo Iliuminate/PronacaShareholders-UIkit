@@ -27,10 +27,13 @@ final class SectionsViewController: UIViewController {
         super.viewDidLoad()
         setUpView()
         setUpCollections()
+        configureBackButton()
+        configureRightButtons()
     }
 
     private func setUpView() {
         customDataHeader = self.dataHeader.compactMap{ ShelfCellModel(title: $0, color: .green1) }
+        customDataHeader[0].isSelected = true
         
         let products: [ProductItemModel] = [
             ProductItemModel(icon: UIImage(named: "pollo")!, title: "Duo Pacj Mor. Pollo peso 2.5Kg a 3.5Kg", amount: "$3,76", numberOfProducts: 0),
@@ -49,6 +52,39 @@ final class SectionsViewController: UIViewController {
         sectionsHeaderCollection.dataSource = self
         productsCollection.delegate = self
         productsCollection.dataSource = self
+    }
+    
+    private func configureBackButton() {
+        navigationItem.configureBarButtonWithLabel(
+            imageName: "backArrow",
+            title: "Cánicos",
+            tintColor: .black1,
+            target: self,
+            selector: #selector(backAction),
+            side: .left
+        )
+    }
+    
+    private func configureRightButtons() {
+        navigationItem.configureCartButton(
+            tintColor: .black1,
+            target: self,
+            selector: #selector(openCart),
+            side: .right
+        )
+    }
+    
+    @objc func backAction() {
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @objc func openCart() {
+        guard let navigation = navigationController else { return }
+        navigation.pushWireframe(CartWireframe())
     }
 }
 
@@ -109,13 +145,17 @@ extension SectionsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case sectionsHeaderCollection: return CGSize(width: 100.0, height: collectionView.bounds.height)
-        case productsCollection: return CGSize(width: collectionView.bounds.width, height: 190.0)
+        case productsCollection: return CGSize(width: collectionView.bounds.width, height: 194.0)
         default: return .zero
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 25, bottom: 1, right: 25)
+        switch collectionView {
+        case sectionsHeaderCollection: return UIEdgeInsets(top: 0, left: 15, bottom: 1, right: 15)
+        case productsCollection: return UIEdgeInsets(top: 0, left: 25, bottom: 1, right: 25)
+        default: return .zero
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

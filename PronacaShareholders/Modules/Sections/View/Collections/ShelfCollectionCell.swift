@@ -46,8 +46,9 @@ class ShelfCollectionCell: UICollectionViewCell {
     
     private func setUpStyle() {
         productsCollection.backgroundColor = .clear
-        titleLabel.font = UIFont(.MontserratSemiBold, .s14)
+        titleLabel.font = UIFont(.MontserratSemiBold, .s16)
         titleLabel.textColor = .black1
+        showAllButton.greenButton3()
     }
     
     private func addGestures() {
@@ -65,7 +66,7 @@ class ShelfCollectionCell: UICollectionViewCell {
     func configure(with data: ShelfCollectionModel, indexPath: IndexPath){
         headerIcon.image = data.icon
         titleLabel.text = data.title
-        showAllButton.setTitle(data.buttonText, for: .normal)
+        showAllButton.setTitle("+ \(data.buttonText)", for: .normal)
         index = indexPath
         products = data.products
         productsCollection.reloadData()

@@ -32,6 +32,11 @@ class TrademarksCollectionCell: UICollectionViewCell {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: "\(HomeHeaderReusableView.self)"
         )
+        trademarksCollection.register(
+            UINib(nibName: "\(HomePromotionBottomReusableView.self)", bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: "\(HomePromotionBottomReusableView.self)"
+        )
     }
     
     // MARK: - Public methods -
@@ -61,13 +66,21 @@ extension TrademarksCollectionCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(HomeHeaderReusableView.self)", for: indexPath) as? HomeHeaderReusableView else {
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind, withReuseIdentifier: "\(HomeHeaderReusableView.self)",
+                    for: indexPath) as? HomeHeaderReusableView else {
                 return UICollectionReusableView()
             }
             headerView.configure(with: HeaderItem(title: "Marcas", buttonText: "", buttonIsHidden: true))
             return headerView
         case UICollectionView.elementKindSectionFooter:
-            return UICollectionReusableView()
+            guard let footerView = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind, withReuseIdentifier: "\(HomePromotionBottomReusableView.self)",
+                    for: indexPath) as? HomePromotionBottomReusableView else {
+                return UICollectionReusableView()
+            }
+            footerView.delegate = self
+            return footerView
         default:
             return UICollectionReusableView()
         }
@@ -99,7 +112,7 @@ extension TrademarksCollectionCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize.zero
+        return CGSize(width: collectionView.frame.width, height: 50.0)
     }
 }
 
@@ -107,5 +120,12 @@ extension TrademarksCollectionCell: TrademarksCellDelegate {
     
     func selectedSection(indexPath: IndexPath) {
         delegate?.selectedHomeSection(type: .trademarks, indexPath: indexPath)
+    }
+}
+
+
+extension TrademarksCollectionCell: HomePromotionBottomReusableViewDelegate {
+    func handleTapButton() {
+        print("CEDA: TrademarksCollectionCell-handleTapButton")
     }
 }

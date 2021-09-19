@@ -40,9 +40,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLC-Ef-5qf" customClass="ButtonItem" customModule="PronacaShareholders" customModuleProvider="target">
-                                <rect key="frame" x="4" y="145" width="126" height="24"/>
+                                <rect key="frame" x="4" y="137" width="126" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="zwX-Cw-1GR"/>
+                                    <constraint firstAttribute="height" constant="30" id="zwX-Cw-1GR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o37-4T-bea">
@@ -67,7 +67,7 @@
                             <constraint firstItem="mLC-Ef-5qf" firstAttribute="leading" secondItem="VqB-hO-x2v" secondAttribute="leading" constant="4" id="WXz-Mz-q4w"/>
                             <constraint firstItem="o37-4T-bea" firstAttribute="leading" secondItem="VqB-hO-x2v" secondAttribute="leading" constant="4" id="khM-72-zHe"/>
                             <constraint firstItem="lpc-aE-b02" firstAttribute="top" secondItem="VqB-hO-x2v" secondAttribute="top" constant="4" id="slf-ec-cyV"/>
-                            <constraint firstAttribute="bottom" secondItem="mLC-Ef-5qf" secondAttribute="bottom" constant="4" id="xx5-nM-bOX"/>
+                            <constraint firstAttribute="bottom" secondItem="mLC-Ef-5qf" secondAttribute="bottom" constant="6" id="xx5-nM-bOX"/>
                         </constraints>
                     </view>
                 </subviews>
